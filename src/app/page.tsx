@@ -5,8 +5,8 @@ import ProjectShowcase from "./components/home/project-showcase";
 export default function Home() {
   return (
     <main>
-      <Landing/>
-      <ProjectShowcase/>
+      <Landing />
+      <ProjectShowcase />
     </main>
   );
 }

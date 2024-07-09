@@ -7,7 +7,7 @@ const CARD_CLASS = 'px-6 py-4 border border-gray-100 rounded-[20px] text-white'
 
 export default function ProjectShowcase() {
     return (
-        <section className='bg-black-100 grid grid-cols-3 p-6 gap-4'>
+        <section className='bg-black-100 flex flex-col lg:grid lg:grid-cols-3 p-6 gap-4'>
             <div className={`${CARD_CLASS} flex items-center col-span-2`}>
                 <div>
                     <span className='text-6xl '>
@@ -51,7 +51,7 @@ export default function ProjectShowcase() {
                         </span>
                         Artificial Intelligence, Virtual Reality.</p>
                 </div>
-                <div className='flex flex-row gap-20 justify-between items-end'>
+                <div className='flex lg:flex-col flex-row justify-between items-end'>
                     <Image src="/assets/images/gamepad-big.png" alt='Gamepad Big' width={140} height={117} className='' />
                     <div className='flex flex-col gap-[8px]'>
                         <div className='text-2xl'>Connect with me</div>

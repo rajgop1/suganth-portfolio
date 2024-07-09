@@ -1,3 +1,151 @@
+.multiCard:hover .multiCardLeft {
+    animation: wobble-left 1.5s ease infinite;
+}
+
+.multiCard:hover .multiCardRight {
+    animation: wobble-right 1.5s ease infinite;
+}
+
+@keyframes wobble-left {
+    0% {
+        transform: translateX(0%);
+    }
+
+    15% {
+        transform: translateX(-25%) rotate(-5deg);
+    }
+
+    30% {
+        transform: translateX(20%) rotate(3deg);
+    }
+
+    45% {
+        transform: translateX(-15%) rotate(-3deg);
+    }
+
+    60% {
+        transform: translateX(10%) rotate(2deg);
+    }
+
+    75% {
+        transform: translateX(-5%) rotate(-1deg);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes wobble-right {
+    0% {
+        transform: translateX(0%);
+    }
+
+    15% {
+        transform: translateX(25%) rotate(-5deg);
+    }
+
+    30% {
+        transform: translateX(-20%) rotate(3deg);
+    }
+
+    45% {
+        transform: translateX(15%) rotate(-3deg);
+    }
+
+    60% {
+        transform: translateX(-10%) rotate(2deg);
+    }
+
+    75% {
+        transform: translateX(5%) rotate(-1deg);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.cardContainer {
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; */
+    transform-style: preserve-3d;
+}
+
 .card {
-    
+    animation: rotateCard 2s ease-in-out infinite;
+}
+
+.paused{
+    -webkit-animation-play-state:paused !important;
+    -moz-animation-play-state:paused !important;
+    -o-animation-play-state:paused !important; 
+    animation-play-state:paused !important;
+}
+
+@keyframes rotateCard {
+
+    /* Hold first */
+    0% {
+        transform: translateZ(1px);
+    }
+
+    /* Hold first */
+    13% {
+        transform: translateZ(1px);
+    }
+
+    /* Move second */
+    25% {
+        transform: rotate(-4deg) scale(0.9) translate(-15%, -5%);
+    }
+
+    /* Hold second */
+    37.5% {
+        transform: rotate(-4deg) scale(0.9) translate(-15%, -5%);
+    }
+
+    /* Move third */
+    50% {
+        transform: rotate(4deg) scale(0.9) translate(15%, -5%);
+    }
+
+    /* Hold third */
+    62.5% {
+        transform: rotate(4deg) scale(0.9) translate(15%, -5%);
+    }
+
+    /* Move fourth */
+    75% {
+        transform: rotate(4deg) scale(0.9) translate(15%, -5%);
+    }
+
+    /* Hold fourth */
+    87.5% {
+        transform: rotate(4deg) scale(0.9) translate(15%, -5%);
+    }
+
+    /* Move front */
+    100% {
+        transform: translateZ(1px);
+    }
+}
+
+.card:nth-child(1) {
+    animation-delay: -1.5s;
+}
+
+.card:nth-child(2) {
+    animation-delay: -1s;
+}
+
+.card:nth-child(3) {
+    animation-delay: -0.5s;
+}
+
+/* This one is naturally at the front so we'll start with it */
+.card:nth-child(4) {
+    animation-delay: 0;
 }

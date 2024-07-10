@@ -1,4 +1,83 @@
-.bentoBoxBg{
-    background:linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url('/assets/images/bento-box.png');
+.bentoBoxBg {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 1)), url('/assets/images/bento-box.png');
     background-size: contain;
+}
+
+.projectImageContainer {
+    transform-style: preserve-3d;
+}
+
+.projectImage {
+    animation: shiftImageCard 4s ease-in-out infinite;
+}
+
+@keyframes shiftImageCard {
+    0% {
+        transform: translateZ(1px) translateY(0px);
+        opacity: 1;
+    }
+
+    /* Hold first */
+    13% {
+        transform: translateZ(1px) translateY(0px);
+        opacity: 1;
+    }
+
+    /* Move second */
+    25% {
+        transform: scale(0.9) translateY(20px);
+        opacity: 0.8;
+    }
+
+    /* Hold second */
+    37.5% {
+        transform: scale(0.9) translateY(20px);
+        opacity: 0.8;
+    }
+
+    /* Move third */
+    50% {
+        transform: scale(0.9) translateY(40px);
+        opacity: 0.6;
+    }
+
+    /* Hold third */
+    62.5% {
+        transform: scale(0.9) translateY(40px);
+        opacity: 0.6;
+    }
+
+    /* Move fourth */
+    75% {
+        transform: scale(0.8) translateY(60px);
+        opacity: 0.4;
+    }
+
+    /* Hold fourth */
+    87.5% {
+        transform: scale(0.8) translateY(60px);
+        opacity: 0.4;
+    }
+
+    /* Move front */
+    100% {
+        transform: translateZ(1px) translateY(0px);
+        opacity: 1;
+    }
+}
+
+.projectImage:nth-child(1) {
+    animation-delay: -3s;
+}
+
+.projectImage:nth-child(2) {
+    animation-delay: -2s;
+}
+
+.projectImage:nth-child(3) {
+    animation-delay: -1s;
+}
+
+.projectImage:nth-child(4) {
+    animation-delay: 0;
 }

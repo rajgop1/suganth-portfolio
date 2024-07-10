@@ -61,8 +61,8 @@ export default function Landing() {
     return (
         <>
             {isScreenTypeMultiCards === false ? <section className='min-h-[100vh] lg:h-[100vh] flex flex-col lg:flex-row'>
-                <section className='flex-1 pb-[15rem] lg:pb-0 lg:flex-auto lg:w-1/3 bg-orange-100'>
-                    <Image width={300} height={100} alt='My Signature (Suganth)' src={"/assets/images/my-sign.png"} />
+                <section className='flex-1 pb-[15rem] lg:pb-0 lg:flex-auto lg:w-1/3 bg-orange-100 flex flex-row justify-center lg:justify-left'>
+                    <Image width={0} height={0} sizes='100vw' className='h-[8rem] w-[16rem]' alt='My Signature (Suganth)' src={"/assets/images/my-sign.png"} />
                 </section>
                 <section className={`relative `} >
                     <section className={`${styles.cardContainer} absolute top-[50%] left-[50%] translate-y-[50%] translate-x-[-50%] lg:top-0 lg:left-0 lg:translate-y-0 lg:translate-x-0  h-full z-1 flex flex-col justify-center items-center`}>
@@ -101,7 +101,7 @@ export default function Landing() {
                 </section>
             </section> : <section>
                 <section className='flex flex-row justify-between bg-orange-100 px-[2rem] py-[1rem]'>
-                    <Image width={300} height={100} alt='My Signature (Suganth)' src={"/assets/images/my-sign.png"} />
+                    <Image width={0} height={0} sizes='100vw' className='h-[4rem] w-[8rem] lg:w-[16rem]' alt='My Signature (Suganth)' src={"/assets/images/my-sign.png"} />
                     <div className='flex gap-8 border border-2 p-4 border-gray-200'>
                         <div onClick={() => dispatch(setScreenTypeMultiCards(false))}>
                             <SingleGamepad isMultiCard={isScreenTypeMultiCards} />
@@ -111,9 +111,9 @@ export default function Landing() {
                         </div>
                     </div>
                 </section>
-                <section className='bg-black-100 grid grid-cols-2 gap-y-[8rem] p-[4rem] justify-center items-center'>
+                <section className='bg-black-100 flex flex-col lg:grid grid-cols-2 gap-y-[2rem] lg:gap-y-[8rem] p-[4rem] justify-items-center items-center'>
                     {updateCards.map(card => {
-                        return <section key={card.id} className={`flex flex-col justify-between p-6 h-[460px] lg:h-[570px] w-[250px] lg:w-[350px] rounded-[1.25rem] text-white`} style={{ background: `linear-gradient(45deg, ${card.gradient[0]}, ${card.gradient[1]})` }}>
+                        return <section key={card.id} className={`flex flex-col justify-between p-6 h-[500px] lg:h-[570px] w-[350px] lg:min-w-[350px] rounded-[1.25rem] text-white`} style={{ background: `linear-gradient(45deg, ${card.gradient[0]}, ${card.gradient[1]})` }}>
                             <div className='flex flex-row'>
                                 <div className='text-md uppercase font-medium'>{card.tag}</div>
                                 <div className={`relative group hover:translate-x-[30%] hover:translate-y-[-30%] `}>

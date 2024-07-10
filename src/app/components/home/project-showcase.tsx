@@ -1,9 +1,33 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import style from "./project-showcase.module.css"
+import styles from "./project-showcase.module.css"
 
 const CARD_CLASS = 'px-6 py-4 border border-gray-100 rounded-[20px] text-white'
+const GRADIENT_CLASS = 'bg-gradient-to-br from-[#3C3C3C] to-[#070809]'
+
+const PROJECT_IMAGES = [
+    {
+        id: 1,
+        src: "/assets/images/sample-prj-1.png",
+        alt: "project"
+    },
+    {
+        id: 2,
+        src: "/assets/images/sample-prj-2.png",
+        alt: "project"
+    },
+    {
+        id: 3,
+        src: "/assets/images/sample-prj-3.png",
+        alt: "project"
+    },
+    {
+        id: 4,
+        src: "/assets/images/sample-prj-4.png",
+        alt: "project"
+    },
+]
 
 export default function ProjectShowcase() {
     return (
@@ -20,7 +44,7 @@ export default function ProjectShowcase() {
                     </span>
                 </div>
             </div>
-            <div className={`${CARD_CLASS} bg-gradient-to-br from-[#3C3C3C] to-[#070809] flex flex-col gap-[10px] justify-between`}>
+            <div className={`${CARD_CLASS} ${GRADIENT_CLASS} flex flex-col gap-[10px] justify-between`}>
                 <div className='text-right'>FAVORITE</div>
                 <div className='h-[2px] bg-gray-200'></div>
 
@@ -36,7 +60,7 @@ export default function ProjectShowcase() {
             </div>
             <div className={`${CARD_CLASS} flex flex-col justify-between`}>
                 <div className='flex flex-col gap-2'>
-                    <div className='text-3xl font-bold'>Me?</div>
+                    <div className='text-3xl font-bold uppercase'>Me?</div>
                     <p className='text-xl'>
                         <span className='text-gray-300'>
                             I’m passion about creating {' '}
@@ -85,13 +109,56 @@ export default function ProjectShowcase() {
                     <div className='text-lg font-semibold text-center tracking-[0.25rem] uppercase'>Expert - Design Trend </div>
                 </div>
                 <div className={`${CARD_CLASS} flex-1`}>
-                    <div className={`flex flex-col gap-2 justify-end bg-[url("/assets/images/bento-box.png")] bg-cover bg-no-repeat h-full rounded-[10px] ${style.bentoBoxBg}`}>
+                    <div className={`flex flex-col gap-2 justify-end bg-[url("/assets/images/bento-box.png")] bg-cover bg-no-repeat h-full rounded-[10px] ${styles.bentoBoxBg}`}>
                         <span className='px-4 text-2xl font-bold'>
                             Bento Box
                         </span>
                         <span className='px-4 pb-2 text-sm font-semibold'>
                             Grid-based approach, where content is organised into distinct 'cells' that work together to create aesthetically pleasing user interfaces and a strong content hierarchy
                         </span>
+                    </div>
+                </div>
+            </div>
+            <div className={`${CARD_CLASS} col-span-2 justify-between ${GRADIENT_CLASS} flex`}>
+                <div className='flex flex-col justify-between'>
+                    <div className='text-3xl font-bold uppercase'>Projects?</div>
+                    <div className='flex flex-col gap-4'>
+                        <Image src="/assets/images/gamepad-big.png" alt='Gamepad Big' width={140} height={117} className='' />
+                        <div className='flex flex-col'>
+                            <div className='text-xl leading uppercase tracking-[0.4rem] font-medium'>
+                                UX Case studies
+                            </div>
+                            <div className='text-lg font-medium'>
+                                13 project
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className='flex flex-col justify-center items-center'>
+                    <div className={` w-[26rem] h-[14rem] relative ${styles.projectImageContainer}`}>
+                        {PROJECT_IMAGES.map((projectImage) => (
+                            <Image key={projectImage.id} width={0} height={0} sizes='100vw' fill objectFit='cover' className={`absolute top-0 left-0 h-full w-full object-cover rounded-[1rem] border-[5px] border-gray-600 ${styles.projectImage}`} src={`${projectImage.src}`} alt={projectImage.alt} />
+                        ))}
+                    </div>
+                </div>
+            </div>
+            <div className={`${CARD_CLASS}`}>
+                <div className='flex flex-col gap-4'>
+                    <div className='text-3xl font-bold uppercase'>Experience</div>
+                    <div className='flex flex-row items-center gap-2'>
+                        <span className='tracking-[0.5rem]'>SINCE {' '}</span>
+                        <span className='text-3xl font-bold underline text-transparent'><span className='text-white'>20</span><span className='underline text-green-100'><span className='text-white'>12</span></span></span>
+                    </div>
+                    <div className='flex flex-col gap-16'>
+                        <div className='text-gray-300 font-bold uppercase tracking-[0.25rem]'>
+                            Companies I enjoy working with
+                        </div>
+                        <div className='flex flex-row flex-wrap gap-6 items-center'>
+                            <Image src={"/assets/images/mtx.png"} width={99} height={99} alt='MTX' />
+                            <Image src={"/assets/images/infosys.png"} width={150} height={60} alt='INFOSYS' />
+                            <Image src={"/assets/images/factset.png"} width={160} height={36} alt='FACTSET' />
+
+                        </div>
                     </div>
                 </div>
             </div>

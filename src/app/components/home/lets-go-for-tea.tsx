@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import ImageWrapper from '../common/ImageWrapper'
 
 export default function LetsGoForTea() {
     return (
@@ -14,7 +15,7 @@ export default function LetsGoForTea() {
                     </div>
                 </div>
                 <div className='flex-1 flex flex-row justify-center'>
-                    <Image src={"/assets/images/gamepad-right-big.png"} width={300} height={250} alt='Gamepad Big Right' />
+                    <ImageWrapper src={"/assets/images/gamepad-right-big.png"} width={300} height={250} alt='Gamepad Big Right' />
                 </div>
             </section>
         </section>

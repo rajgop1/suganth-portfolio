@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import styles from "./project-showcase.module.css"
+import ImageWrapper from '../common/ImageWrapper'
 
 const CARD_CLASS = 'px-6 py-4 border border-gray-100 rounded-[20px] text-white'
 const GRADIENT_CLASS = 'bg-gradient-to-br from-[#3C3C3C] to-[#070809]'
@@ -54,7 +55,7 @@ export default function ProjectShowcase() {
                         <div className='text-green-100'>I’m Waiting...</div>
                     </div>
                     <div className='w-[42px] h-[42px] overflow-hidden rounded-[42px]'>
-                        <Image src="/assets/images/my-photo-1.png" alt='My Profile Image' width={100} height={100} className='w-full h-full object-cover' />
+                        <ImageWrapper src="/assets/images/my-photo-1.png" alt='My Profile Image' width={100} height={100} className='w-full h-full object-cover' />
                     </div>
                 </div>
             </div>
@@ -76,25 +77,25 @@ export default function ProjectShowcase() {
                         Artificial Intelligence, Virtual Reality.</p>
                 </div>
                 <div className='flex  flex-row justify-between items-end'>
-                    <Image src="/assets/images/gamepad-big.png" alt='Gamepad Big' width={140} height={117} className='' />
+                    <ImageWrapper src="/assets/images/gamepad-big.png" alt='Gamepad Big' width={140} height={117} className='' />
                     <div className='flex flex-col gap-[8px]'>
                         <div className='text-2xl'>Connect with me</div>
                         <div className='flex flex-row gap-2 justify-end'>
                             <Link href="/" className='bg-black-200 border border-gray-400 p-[8px] flex flex-row justify-center items-center rounded-full h-[35px] w-[35px]'>
-                                <Image src="/assets/images/gmail.png" alt='Gmail' width={200} height={200} className='w-full h-full object-contain' />
+                                <ImageWrapper src="/assets/images/gmail.png" alt='Gmail' width={200} height={200} className='w-full h-full object-contain' />
                             </Link>
                             <Link href="/" className='bg-black-200 border border-gray-400 p-[8px] flex flex-row justify-center items-center rounded-full h-[35px] w-[35px]'>
-                                <Image src="/assets/images/instagram.png" alt='Instagram' width={200} height={200} className='w-full h-full object-contain' />
+                                <ImageWrapper src="/assets/images/instagram.png" alt='Instagram' width={200} height={200} className='w-full h-full object-contain' />
                             </Link>
                             <Link href="/" className='bg-black-200 border border-gray-400 p-[8px] flex flex-row justify-center items-center rounded-full h-[35px] w-[35px]'>
-                                <Image src="/assets/images/linkedin.png" alt='Linkedin' width={200} height={200} className='w-full h-full object-contain' />
+                                <ImageWrapper src="/assets/images/linkedin.png" alt='Linkedin' width={200} height={200} className='w-full h-full object-contain' />
                             </Link>
                         </div>
                     </div>
                 </div>
             </div>
             <div className={`${CARD_CLASS}`}>
-                <Image src="/assets/images/my-photo-big.png" alt='My Profile Image' width={340} height={450} className='w-full h-full object-cover' />
+                <ImageWrapper src="/assets/images/my-photo-big.png" alt='My Profile Image' width={340} height={450} className='w-full h-full object-cover' />
             </div>
             <div className='flex flex-col gap-4'>
                 <div className={`${CARD_CLASS} flex flex-col py-8`}>
@@ -123,7 +124,7 @@ export default function ProjectShowcase() {
                 <div className='flex flex-col justify-between'>
                     <div className='text-3xl font-bold uppercase'>Projects?</div>
                     <div className='flex flex-col gap-4'>
-                        <Image src="/assets/images/gamepad-big.png" alt='Gamepad Big' width={140} height={117} className='' />
+                        <ImageWrapper src="/assets/images/gamepad-big.png" alt='Gamepad Big' width={140} height={117} className='' />
                         <div className='flex flex-col'>
                             <div className='text-xl leading uppercase tracking-[0.4rem] font-medium'>
                                 UX Case studies
@@ -137,7 +138,7 @@ export default function ProjectShowcase() {
                 <div className='flex flex-col justify-center items-center'>
                     <div className={` w-[26rem] h-[14rem] relative ${styles.projectImageContainer}`}>
                         {PROJECT_IMAGES.map((projectImage) => (
-                            <Image key={projectImage.id} width={0} height={0} sizes='100vw' fill objectFit='cover' className={`absolute top-0 left-0 h-full w-full object-cover rounded-[1rem] border-[5px] border-gray-600 ${styles.projectImage}`} src={`${projectImage.src}`} alt={projectImage.alt} />
+                            <ImageWrapper key={projectImage.id} width={0} height={0} sizes='100vw' fill objectFit='cover' className={`absolute top-0 left-0 h-full w-full object-cover rounded-[1rem] border-[5px] border-gray-600 ${styles.projectImage}`} src={`${projectImage.src}`} alt={projectImage.alt} />
                         ))}
                     </div>
                 </div>
@@ -154,9 +155,9 @@ export default function ProjectShowcase() {
                             Companies I enjoy working with
                         </div>
                         <div className='flex flex-row flex-wrap gap-6 items-center'>
-                            <Image src={"/assets/images/mtx.png"} width={99} height={99} alt='MTX' />
-                            <Image src={"/assets/images/infosys.png"} width={150} height={60} alt='INFOSYS' />
-                            <Image src={"/assets/images/factset.png"} width={160} height={36} alt='FACTSET' />
+                            <ImageWrapper src={"/assets/images/mtx.png"} width={99} height={99} alt='MTX' />
+                            <ImageWrapper src={"/assets/images/infosys.png"} width={150} height={60} alt='INFOSYS' />
+                            <ImageWrapper src={"/assets/images/factset.png"} width={160} height={36} alt='FACTSET' />
 
                         </div>
                     </div>

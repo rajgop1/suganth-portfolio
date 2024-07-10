@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    reactStrictMode:false
+    reactStrictMode: false,
+    output: "export",
+    basePath: "/suganth-portfolio",
+    images: {
+        unoptimized: true,
+    },
 };
 
 export default nextConfig;

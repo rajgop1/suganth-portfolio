@@ -1,6 +1,7 @@
 "use client"
 import Image from 'next/image'
 import React from 'react'
+import ImageWrapper from '../common/ImageWrapper'
 
 const PORTFOLIO_AND_UIUX_DESIGN_DATA = [
     {
@@ -81,7 +82,7 @@ export default function PortfolioAndUxDesign() {
                             <div className='rounded-[20px] bg-gray-700 flex flex-col gap-[1.6rem] p-8 tracking-[0.25rem]'>
                                 <div className='uppercase text-xl font-semibold'>{card.title}</div>
                                 <div className='h-[260px]'>
-                                    <Image width={0} height={0} sizes='100vw' className='w-full h-full rounded-[20px] object-cover' alt={card.title} src={card.img} />
+                                    <ImageWrapper width={0} height={0} sizes='100vw' className='w-full h-full rounded-[20px] object-cover' alt={card.title} src={card.img} />
                                 </div>
                                 <div className='flex flex-row gap-3 justify-center items-center'>
                                     <div className='text-md font-bold uppercase opacity-[0.5]'>{card.company}</div>

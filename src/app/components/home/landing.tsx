@@ -5,6 +5,7 @@ import styles from "./landing.module.css"
 import { useDispatch, useSelector } from 'react-redux'
 import { setScreenTypeMultiCards } from '@/store/redux/screen-type'
 import { createRandomGenerator, generateSequence, shuffleGenerator } from '@/util/helper'
+import ImageWrapper from '../common/ImageWrapper'
 
 const cards = [
     {
@@ -62,7 +63,7 @@ export default function Landing() {
         <>
             {isScreenTypeMultiCards === false ? <section className='min-h-[100vh] lg:h-[100vh] flex flex-col lg:flex-row'>
                 <section className='flex-1 pb-[15rem] lg:pb-0 lg:flex-auto lg:w-1/3 bg-orange-100 flex flex-row justify-center lg:justify-left'>
-                    <Image width={0} height={0} sizes='100vw' className='h-[8rem] w-[16rem]' alt='My Signature (Suganth)' src={"/assets/images/my-sign.png"} />
+                    <ImageWrapper width={0} height={0} sizes='100vw' className='h-[8rem] w-[16rem]' alt='My Signature (Suganth)' src={"/assets/images/my-sign.png"} />
                 </section>
                 <section className={`relative `} >
                     <section className={`${styles.cardContainer} absolute top-[50%] left-[50%] translate-y-[50%] translate-x-[-50%] lg:top-0 lg:left-0 lg:translate-y-0 lg:translate-x-0  h-full z-1 flex flex-col justify-center items-center`}>
@@ -71,9 +72,9 @@ export default function Landing() {
                                 <div className='flex flex-row'>
                                     <div className='text-md uppercase font-medium'>{card.tag}</div>
                                     <div className={`relative group hover:translate-x-[30%] hover:translate-y-[-30%] transition ${styles.imgCard}`}>
-                                        <Image className={`absolute left-[-20px] top-20 ${styles.imgCardLeft}`} width={27} height={19} alt={card.tag} src={"/assets/images/gamepad-intro-left.png"} />
-                                        <Image width={160} height={100} alt={card.tag} src={"/assets/images/gamepad-intro.png"} />
-                                        <Image className={`absolute right-0 bottom-[-40px] ${styles.imgCardRight}`} width={40} height={21} alt={card.tag} src={"/assets/images/gamepad-intro-right.png"} />
+                                        <ImageWrapper className={`absolute left-[-20px] top-20 ${styles.imgCardLeft}`} width={27} height={19} alt={card.tag} src={"/assets/images/gamepad-intro-left.png"} />
+                                        <ImageWrapper width={160} height={100} alt={card.tag} src={"/assets/images/gamepad-intro.png"} />
+                                        <ImageWrapper className={`absolute right-0 bottom-[-40px] ${styles.imgCardRight}`} width={40} height={21} alt={card.tag} src={"/assets/images/gamepad-intro-right.png"} />
                                     </div>
                                 </div>
                                 <div className='flex flex-col gap-2 pb-4'>
@@ -106,7 +107,7 @@ export default function Landing() {
                 </section>
             </section> : <section>
                 <section className='flex flex-row justify-between bg-orange-100 px-[2rem] py-[1rem] items-center'>
-                    <Image width={0} height={0} sizes='100vw' className='h-[4rem] w-[8rem] lg:h-[8rem] lg:w-[16rem]' alt='My Signature (Suganth)' src={"/assets/images/my-sign.png"} />
+                    <ImageWrapper width={0} height={0} sizes='100vw' className='h-[4rem] w-[8rem] lg:h-[8rem] lg:w-[16rem]' alt='My Signature (Suganth)' src={"/assets/images/my-sign.png"} />
                     <div className='relative flex gap-8 p-2 '>
                         <div className='absolute top-0 left-[-20px] right-[-20px] h-[2px] bg-gray-100'></div>
                         <div className='absolute bottom-0 left-[-20px] right-[-20px] h-[2px] bg-gray-100'></div>
@@ -128,9 +129,9 @@ export default function Landing() {
                             <div className='flex flex-row'>
                                 <div className='text-md uppercase font-medium'>{card.tag}</div>
                                 <div className={`relative group hover:translate-x-[30%] hover:translate-y-[-30%] `}>
-                                    <Image className={`absolute left-[-20px] top-20 ${styles.imgCardLeft}`} width={27} height={19} alt={card.tag} src={"/assets/images/gamepad-intro-left.png"} />
-                                    <Image width={160} height={100} alt={card.tag} src={"/assets/images/gamepad-intro.png"} />
-                                    <Image className={`absolute right-0 bottom-[-40px] ${styles.imgCardRight}`} width={40} height={21} alt={card.tag} src={"/assets/images/gamepad-intro-right.png"} />
+                                    <ImageWrapper className={`absolute left-[-20px] top-20 ${styles.imgCardLeft}`} width={27} height={19} alt={card.tag} src={"/assets/images/gamepad-intro-left.png"} />
+                                    <ImageWrapper width={160} height={100} alt={card.tag} src={"/assets/images/gamepad-intro.png"} />
+                                    <ImageWrapper className={`absolute right-0 bottom-[-40px] ${styles.imgCardRight}`} width={40} height={21} alt={card.tag} src={"/assets/images/gamepad-intro-right.png"} />
                                 </div>
                             </div>
                             <div className='flex flex-col gap-2 pb-4'>
@@ -203,9 +204,9 @@ const DiceAnimation = ({ isDiceAnimating, setDiceAnimating }: { isDiceAnimating:
             {
                 isDiceAnimating === false ?
                     <div onClick={onDiceAnimation}>
-                        <Image src={dice.src} height={80} width={104} alt={dice.alt} />
-                        <Image src={"/assets/images/shuffle-arrow.png"} height={80} width={104} alt={dice.alt} />
-                    </div> : <Image unoptimized src={"/assets/images/dice-animation.gif"} height={70} width={84} alt={dice.alt} />
+                        <ImageWrapper src={dice.src} height={80} width={104} alt={dice.alt} />
+                        <ImageWrapper src={"/assets/images/shuffle-arrow.png"} height={80} width={104} alt={dice.alt} />
+                    </div> : <ImageWrapper unoptimized src={"/assets/images/dice-animation.gif"} height={70} width={84} alt={dice.alt} />
             }
             <div className='text-white text-sm text-center'>
                 Would like to know more about me, let's play some cards.
@@ -217,7 +218,7 @@ const DiceAnimation = ({ isDiceAnimating, setDiceAnimating }: { isDiceAnimating:
 const SingleGamepad = ({ isMultiCard }: { isMultiCard: boolean }) => {
     return (
         <div className={`rounded-full p-6 h-20 w-20 flex justify-center items-center translate-x-0 translate-y-0 group transition-all ${isMultiCard === false && "bg-green-100"}`}>
-            <Image src={'/assets/images/gamepad-center.png'} alt='Gamepad image center' width={36} height={52} className={`${isMultiCard && 'transition-all	 group-hover:translate-y-[-30%]'} `} />
+            <ImageWrapper src={'/assets/images/gamepad-center.png'} alt='Gamepad image center' width={36} height={52} className={`${isMultiCard && 'transition-all	 group-hover:translate-y-[-30%]'} `} />
         </div>
     )
 }
@@ -225,9 +226,9 @@ const SingleGamepad = ({ isMultiCard }: { isMultiCard: boolean }) => {
 const MultiGamePad = ({ isMultiCard }: { isMultiCard: boolean }) => {
     return (
         <div className={`rounded-full p-6 h-20 w-20 flex justify-center items-center translate-x-0 translate-y-0 group z-[1] ${isMultiCard === true && "bg-green-100"} ${isMultiCard === false && styles.multiCard}`}>
-            <Image src={'/assets/images/gamepad-left.png'} alt='Gamepad image center' width={36} height={52} className={`z-[1] relative left-[30%] ${isMultiCard === false && styles.multiCardLeft}`} />
-            <Image src={'/assets/images/gamepad-center.png'} alt='Gamepad image center' width={36} height={52} className='z-[2]' />
-            <Image src={'/assets/images/gamepad-right.png'} alt='Gamepad image center' width={36} height={52} className={`z-[1] relative left-[-30%] ${isMultiCard === false && styles.multiCardRight}`} />
+            <ImageWrapper src={'/assets/images/gamepad-left.png'} alt='Gamepad image center' width={36} height={52} className={`z-[1] relative left-[30%] ${isMultiCard === false && styles.multiCardLeft}`} />
+            <ImageWrapper src={'/assets/images/gamepad-center.png'} alt='Gamepad image center' width={36} height={52} className='z-[2]' />
+            <ImageWrapper src={'/assets/images/gamepad-right.png'} alt='Gamepad image center' width={36} height={52} className={`z-[1] relative left-[-30%] ${isMultiCard === false && styles.multiCardRight}`} />
         </div>
     )
 }

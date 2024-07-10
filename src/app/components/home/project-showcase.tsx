@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import styles from "./project-showcase.module.css"
 import ImageWrapper from '../common/ImageWrapper'
+import { BASE_PATH_IMAGE } from '@/constants/configuration'
 
 const CARD_CLASS = 'px-6 py-4 border border-gray-100 rounded-[20px] text-white'
 const GRADIENT_CLASS = 'bg-gradient-to-br from-[#3C3C3C] to-[#070809]'
@@ -110,7 +111,7 @@ export default function ProjectShowcase() {
                     <div className='text-lg font-semibold text-center tracking-[0.25rem] uppercase'>Expert - Design Trend </div>
                 </div>
                 <div className={`${CARD_CLASS} flex-1`}>
-                    <div className={`flex flex-col gap-2 justify-end bg-[url("/assets/images/bento-box.png")] bg-cover bg-no-repeat h-full rounded-[10px] ${styles.bentoBoxBg}`}>
+                    <div className={`flex flex-col gap-2 justify-end bg-[url("/suganth-portfolio/assets/images/bento-box.png")] bg-cover bg-no-repeat h-full rounded-[10px] ${styles.bentoBoxBg}`}>
                         <span className='px-4 text-2xl font-bold'>
                             Bento Box
                         </span>

@@ -1,7 +1,8 @@
 "use client"
 import Image from 'next/image'
-import React from 'react'
+import React, { Fragment } from 'react'
 import ImageWrapper from '../common/ImageWrapper'
+import { Separator } from '../common/Separator'
 
 const PORTFOLIO_AND_UIUX_DESIGN_DATA = [
     {
@@ -78,7 +79,7 @@ export default function PortfolioAndUxDesign() {
                     PORTFOLIO_AND_UIUX_DESIGN_DATA.map((card, index) => {
                         const projects = card.projects > 5 ? "5+ Projects" : `${card.projects} Projects`
 
-                        return <>
+                        return <Fragment key={card.id}>
                             <div className='rounded-[20px] bg-gray-700 flex flex-col gap-[1.6rem] p-8 tracking-[0.25rem]'>
                                 <div className='uppercase text-xl font-semibold'>{card.title}</div>
                                 <div className='h-[260px]'>
@@ -95,7 +96,7 @@ export default function PortfolioAndUxDesign() {
                             {(index + 1) % 3 === 0 && <div className='col-span-3 justify-item justify-self-auto'>
                                 <Separator />
                             </div>}
-                        </>
+                        </Fragment>
                     })
                 }
             </section>
@@ -103,8 +104,3 @@ export default function PortfolioAndUxDesign() {
     )
 }
 
-const Separator = () => {
-    return <div className='py-6 mx-[-20px] '>
-        <div className=' h-[2px] bg-gray-300 w-full'></div>
-    </div>
-}

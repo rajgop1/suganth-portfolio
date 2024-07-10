@@ -90,7 +90,12 @@ export default function Landing() {
                 </section>
                 <section className='flex-1 pt-[15rem] pb-[2rem] lg:pt-0 lg:flex-auto lg:w-2/3 bg-black-100 flex flex-col justify-center items-center gap-20'>
                     <DiceAnimation isDiceAnimating={isDiceAnimating} setDiceAnimating={setDiceAnimating} />
-                    <div className='flex gap-8 border border-2 p-4 border-gray-200'>
+                    <div className='relative flex gap-8 p-4 '>
+                        <div className='absolute top-0 left-[-20px] right-[-20px] h-[2px] bg-gray-100'></div>
+                        <div className='absolute bottom-0 left-[-20px] right-[-20px] h-[2px] bg-gray-100'></div>
+                        <div className='absolute left-0 top-[-20px] bottom-[-20px] w-[2px] bg-gray-100'></div>
+                        <div className='absolute right-0 top-[-20px] bottom-[-20px] w-[2px] bg-gray-100'></div>
+                        <div className='absolute left-[50%] top-[-20px] bottom-[-20px] w-[2px] bg-gray-100'></div>
                         <div onClick={() => dispatch(setScreenTypeMultiCards(false))}>
                             <SingleGamepad isMultiCard={isScreenTypeMultiCards} />
                         </div>
@@ -100,9 +105,15 @@ export default function Landing() {
                     </div>
                 </section>
             </section> : <section>
-                <section className='flex flex-row justify-between bg-orange-100 px-[2rem] py-[1rem]'>
-                    <Image width={0} height={0} sizes='100vw' className='h-[4rem] w-[8rem] lg:w-[16rem]' alt='My Signature (Suganth)' src={"/assets/images/my-sign.png"} />
-                    <div className='flex gap-8 border border-2 p-4 border-gray-200'>
+                <section className='flex flex-row justify-between bg-orange-100 px-[2rem] py-[1rem] items-center'>
+                    <Image width={0} height={0} sizes='100vw' className='h-[4rem] w-[8rem] lg:h-[8rem] lg:w-[16rem]' alt='My Signature (Suganth)' src={"/assets/images/my-sign.png"} />
+                    <div className='relative flex gap-8 p-2 '>
+                        <div className='absolute top-0 left-[-20px] right-[-20px] h-[2px] bg-gray-100'></div>
+                        <div className='absolute bottom-0 left-[-20px] right-[-20px] h-[2px] bg-gray-100'></div>
+                        <div className='absolute left-0 top-[-20px] bottom-[-20px] w-[2px] bg-gray-100'></div>
+                        <div className='absolute right-0 top-[-20px] bottom-[-20px] w-[2px] bg-gray-100'></div>
+                        <div className='absolute left-[50%] top-[-20px] bottom-[-20px] w-[2px] bg-gray-100'></div>
+                        
                         <div onClick={() => dispatch(setScreenTypeMultiCards(false))}>
                             <SingleGamepad isMultiCard={isScreenTypeMultiCards} />
                         </div>

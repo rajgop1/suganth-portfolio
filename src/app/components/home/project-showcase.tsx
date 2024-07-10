@@ -31,7 +31,7 @@ const PROJECT_IMAGES = [
 
 export default function ProjectShowcase() {
     return (
-        <section className='bg-black-100 flex flex-col lg:grid lg:grid-cols-3 p-6 gap-4'>
+        <section className='bg-black-100 flex flex-col lg:grid lg:grid-cols-3 gap-4 px-20 pt-20'>
             <div className={`${CARD_CLASS} flex items-center col-span-2`}>
                 <div>
                     <span className='text-6xl '>

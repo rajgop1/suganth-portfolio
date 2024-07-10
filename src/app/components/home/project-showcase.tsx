@@ -51,7 +51,7 @@ export default function ProjectShowcase() {
                         </span>
                         Artificial Intelligence, Virtual Reality.</p>
                 </div>
-                <div className='flex lg:flex-col flex-row justify-between items-end'>
+                <div className='flex  flex-row justify-between items-end'>
                     <Image src="/assets/images/gamepad-big.png" alt='Gamepad Big' width={140} height={117} className='' />
                     <div className='flex flex-col gap-[8px]'>
                         <div className='text-2xl'>Connect with me</div>

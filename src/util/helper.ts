@@ -27,3 +27,26 @@ export function createRandomGenerator(limit: number) {
   };
 }
 
+
+export function shuffleGenerator() {
+  const nums = [1, 2, 3, 4]
+  let index = nums.length
+  return function () {
+    index = index % 4
+    if (index < 0) index = 1
+    return index
+  }
+}
+
+export function* generateSequence(): Generator<number, void, unknown> {
+  const sequence = [4, 3, 2, 1];
+  let index = 0;
+  while (true) {
+    yield sequence[index];
+    if (index >= 3) {
+      index = 0
+    } else {
+      index++
+    }
+  }
+}

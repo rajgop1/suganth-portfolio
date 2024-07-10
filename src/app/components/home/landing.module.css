@@ -78,11 +78,11 @@
     animation: rotateCard 2s ease-in-out infinite;
 }
 
-.paused{
-    -webkit-animation-play-state:paused !important;
-    -moz-animation-play-state:paused !important;
-    -o-animation-play-state:paused !important; 
-    animation-play-state:paused !important;
+.paused {
+    -webkit-animation-play-state: paused !important;
+    -moz-animation-play-state: paused !important;
+    -o-animation-play-state: paused !important;
+    animation-play-state: paused !important;
 }
 
 @keyframes rotateCard {
@@ -119,12 +119,12 @@
 
     /* Move fourth */
     75% {
-        transform: rotate(4deg) scale(0.9) translate(15%, -5%);
+        transform: rotate(4deg) scale(0.8) translate(15%, -5%);
     }
 
     /* Hold fourth */
     87.5% {
-        transform: rotate(4deg) scale(0.9) translate(15%, -5%);
+        transform: rotate(4deg) scale(0.8) translate(15%, -5%);
     }
 
     /* Move front */
@@ -148,4 +148,73 @@
 /* This one is naturally at the front so we'll start with it */
 .card:nth-child(4) {
     animation-delay: 0;
+}
+
+.imgCard:hover .imgCardLeft {
+    animation: wobble-top-left 1.5s ease forwards;
+}
+
+.imgCard:hover .imgCardRight {
+    animation: wobble-bottom-right 1.5s ease forwards;
+}
+
+
+@keyframes wobble-top-left {
+    0% {
+        transform: translate(0%);
+    }
+
+    15% {
+        transform: translate(-25%, -25%) rotate(-5deg);
+    }
+
+    30% {
+        transform: translate(20%, 20%) rotate(3deg);
+    }
+
+    45% {
+        transform: translate(-15%, -15%) rotate(-3deg);
+    }
+
+    60% {
+        transform: translate(10%, 10%) rotate(2deg);
+    }
+
+    75% {
+        transform: translate(0%, 0%) rotate(-1deg);
+    }
+
+    100% {
+        transform: translate(20% 20%) rotate(3deg);
+    }
+}
+
+@keyframes wobble-bottom-right {
+    0% {
+        transform: translate(0%);
+    }
+
+    15% {
+        transform: translate(25%, 25%) rotate(-5deg);
+    }
+
+    30% {
+        transform: translate(-20%, -20%) rotate(3deg);
+    }
+
+    45% {
+        transform: translate(15%, 15%) rotate(-3deg);
+    }
+
+    60% {
+        transform: translate(-10%, -10%) rotate(2deg);
+    }
+
+    75% {
+        transform: translate(0%, 0%) rotate(-1deg);
+    }
+
+    100% {
+        transform: translate(10%, 10%) ;
+    }
 }

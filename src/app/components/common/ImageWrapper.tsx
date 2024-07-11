@@ -7,6 +7,6 @@ const env = process.env.NODE_ENV
 export default function ImageWrapper(props: ImageProps) {
     console.log("env")
     return (
-        <Image {...props} src={`${BASE_PATH_IMAGE}/${props.src}`} />
+        <Image {...props} src={`${props.src}`} />
     )
 }

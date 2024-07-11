@@ -2,7 +2,6 @@
 const nextConfig = {
     reactStrictMode: false,
     output: "export",
-    basePath: "/suganth-portfolio",
     images: {
         unoptimized: true,
     },

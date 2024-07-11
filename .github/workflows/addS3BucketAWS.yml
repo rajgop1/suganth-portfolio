@@ -22,4 +22,4 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-south-1
       - run: aws s3 sync ./out s3://suganth-portfolio-website
-      - run: aws cloudfront create-invalidation --distribution-id {{ MY_CLOUDFRONT_DISTRO_ID }}--paths "/*" "/"
+      - run: aws cloudfront create-invalidation --distribution-id {{ MY_CLOUDFRONT_DISTRO_ID }} --paths "/*" 

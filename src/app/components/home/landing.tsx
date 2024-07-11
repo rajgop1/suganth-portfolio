@@ -108,7 +108,7 @@ export default function Landing() {
             </section> : <section>
                 <section className='flex flex-row justify-between bg-orange-100 px-[2rem] py-[1rem] items-center'>
                     <ImageWrapper width={0} height={0} sizes='100vw' className='h-[4rem] w-[8rem] lg:h-[8rem] lg:w-[16rem]' alt='My Signature (Suganth)' src={"/assets/images/my-sign.png"} />
-                    <div className='relative flex gap-8 p-2 '>
+                    <div className='relative flex gap-2 lg:gap-8 lg:p-2 '>
                         <div className='absolute top-0 left-[-20px] right-[-20px] h-[2px] bg-gray-100'></div>
                         <div className='absolute bottom-0 left-[-20px] right-[-20px] h-[2px] bg-gray-100'></div>
                         <div className='absolute left-0 top-[-20px] bottom-[-20px] w-[2px] bg-gray-100'></div>
@@ -217,7 +217,7 @@ const DiceAnimation = ({ isDiceAnimating, setDiceAnimating }: { isDiceAnimating:
 
 const SingleGamepad = ({ isMultiCard }: { isMultiCard: boolean }) => {
     return (
-        <div className={`rounded-full p-6 h-20 w-20 flex justify-center items-center translate-x-0 translate-y-0 group transition-all ${isMultiCard === false && "bg-green-100"}`}>
+        <div className={`rounded-full p-6 h-20 w-20 flex justify-center items-center translate-x-0 translate-y-0 group transition-all scale-[0.8] lg:scale-[1] ${isMultiCard === false && "bg-green-100"}`}>
             <ImageWrapper src={'/assets/images/gamepad-center.png'} alt='Gamepad image center' width={36} height={52} className={`${isMultiCard && 'transition-all	 group-hover:translate-y-[-30%]'} `} />
         </div>
     )
@@ -225,7 +225,7 @@ const SingleGamepad = ({ isMultiCard }: { isMultiCard: boolean }) => {
 
 const MultiGamePad = ({ isMultiCard }: { isMultiCard: boolean }) => {
     return (
-        <div className={`rounded-full p-6 h-20 w-20 flex justify-center items-center translate-x-0 translate-y-0 group z-[1] ${isMultiCard === true && "bg-green-100"} ${isMultiCard === false && styles.multiCard}`}>
+        <div className={`rounded-full p-6 h-20 w-20 flex justify-center items-center translate-x-0 translate-y-0 group z-[1] scale-[0.8] lg:scale-[1] ${isMultiCard === true && "bg-green-100"} ${isMultiCard === false && styles.multiCard}`}>
             <ImageWrapper src={'/assets/images/gamepad-left.png'} alt='Gamepad image center' width={36} height={52} className={`z-[1] relative left-[30%] ${isMultiCard === false && styles.multiCardLeft}`} />
             <ImageWrapper src={'/assets/images/gamepad-center.png'} alt='Gamepad image center' width={36} height={52} className='z-[2]' />
             <ImageWrapper src={'/assets/images/gamepad-right.png'} alt='Gamepad image center' width={36} height={52} className={`z-[1] relative left-[-30%] ${isMultiCard === false && styles.multiCardRight}`} />

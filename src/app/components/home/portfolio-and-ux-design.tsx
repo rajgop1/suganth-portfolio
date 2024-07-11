@@ -69,12 +69,12 @@ const PORTFOLIO_AND_UIUX_DESIGN_DATA = [
 
 export default function PortfolioAndUxDesign() {
     return (
-        <section className='bg-black-100 text-white px-20 pt-20'>
+        <section className='bg-black-100 text-white px-6 pt-6 lg:px-20 lg:pt-20'>
             <div className='uppercase text-3xl font-bold'>Portfolio - UX & UI Design</div>
             <div className=''>
                 <Separator />
             </div>
-            <section className='grid grid-cols-3 gap-x-[2rem]'>
+            <section className='flex flex-col gap-y-[1rem] lg:gap-y-0 lg:grid grid-cols-3 gap-x-[2rem]'>
                 {
                     PORTFOLIO_AND_UIUX_DESIGN_DATA.map((card, index) => {
                         const projects = card.projects > 5 ? "5+ Projects" : `${card.projects} Projects`
@@ -86,14 +86,14 @@ export default function PortfolioAndUxDesign() {
                                     <ImageWrapper width={0} height={0} sizes='100vw' className='w-full h-full rounded-[20px] object-cover' alt={card.title} src={card.img} />
                                 </div>
                                 <div className='flex flex-row gap-3 justify-center items-center'>
-                                    <div className='text-md font-bold uppercase opacity-[0.5]'>{card.company}</div>
+                                    <div className='text-xs lg:text-md font-bold uppercase opacity-[0.5]'>{card.company}</div>
                                     <div className='h-[0.5rem] w-[0.5rem] rounded-full bg-white'></div>
-                                    <div className='uppercase font-bold'>
+                                    <div className='uppercase font-bold text-xs lg:text-md'>
                                         {projects}
                                     </div>
                                 </div>
                             </div>
-                            {(index + 1) % 3 === 0 && <div className='col-span-3 justify-item justify-self-auto'>
+                            {(index + 1) % 3 === 0 && <div className='hidden lg:block col-span-3 justify-item justify-self-auto'>
                                 <Separator />
                             </div>}
                         </Fragment>

@@ -6,6 +6,7 @@ import StoreWrapper from "@/store/redux/store-wrapper";
 const inter = Inter({ subsets: ["latin"] });
 const archivo = Archivo({subsets: ["latin"]})
 const robotoMono = Roboto_Mono({subsets: ['latin']})
+
 const fonts = {
   inter: inter,
   archivo:archivo,

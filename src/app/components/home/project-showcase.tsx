@@ -33,7 +33,7 @@ const PROJECT_IMAGES = [
 
 export default function ProjectShowcase() {
     return (
-        <section className='bg-black-100 flex flex-col lg:grid lg:grid-cols-3 gap-4 px-20 pt-20'>
+        <section className='bg-black-100 flex flex-col lg:grid lg:grid-cols-3 gap-4 px-6 pt-6 lg:px-20 lg:pt-20'>
             <div className={`${CARD_CLASS} flex items-center col-span-2`}>
                 <div>
                     <span className='text-6xl '>
@@ -77,7 +77,7 @@ export default function ProjectShowcase() {
                         </span>
                         Artificial Intelligence, Virtual Reality.</p>
                 </div>
-                <div className='flex  flex-row justify-between items-end'>
+                <div className='flex flex-col lg:flex-row justify-between items-end'>
                     <ImageWrapper src="/assets/images/gamepad-big.png" alt='Gamepad Big' width={140} height={117} className='' />
                     <div className='flex flex-col gap-[8px]'>
                         <div className='text-2xl'>Connect with me</div>
@@ -121,7 +121,7 @@ export default function ProjectShowcase() {
                     </div>
                 </div>
             </div>
-            <div className={`${CARD_CLASS} col-span-2 justify-between ${GRADIENT_CLASS} flex`}>
+            <div className={`${CARD_CLASS} pb-[4rem] lg:pb-4 col-span-2 justify-between ${GRADIENT_CLASS} flex flex-col lg:flex-row`}>
                 <div className='flex flex-col justify-between'>
                     <div className='text-3xl font-bold uppercase'>Projects?</div>
                     <div className='flex flex-col gap-4'>
@@ -137,7 +137,7 @@ export default function ProjectShowcase() {
                     </div>
                 </div>
                 <div className='flex flex-col justify-center items-center'>
-                    <div className={` w-[26rem] h-[14rem] relative ${styles.projectImageContainer}`}>
+                    <div className={`w-[20rem] h-[10rem] lg:w-[26rem] lg:h-[14rem] relative ${styles.projectImageContainer}`}>
                         {PROJECT_IMAGES.map((projectImage) => (
                             <ImageWrapper key={projectImage.id} width={0} height={0} sizes='100vw' fill objectFit='cover' className={`absolute top-0 left-0 h-full w-full object-cover rounded-[1rem] border-[5px] border-gray-600 ${styles.projectImage}`} src={`${projectImage.src}`} alt={projectImage.alt} />
                         ))}

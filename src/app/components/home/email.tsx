@@ -6,9 +6,9 @@ import ImageWrapper from '../common/ImageWrapper'
 import emailjs from 'emailjs-com';
 
 const EMAIL_CONFIG = {
-    serviceId: "service_jdkswzr",
-    templateId: "template_lnh5ckc",
-    publicKey: "S60Taq-wgxAOClXKU"
+    serviceId: "service_3zpqeqf",
+    templateId: "template_wz8pojb",
+    publicKey: "i6bF6QRsL3n9JiODW"
 }
 
 export default function Email() {
@@ -32,8 +32,8 @@ export default function Email() {
     };
 
     return (
-        <section className='px-20 pt-20 bg-black-100 text-white flex justify-between'>
-            <form onSubmit={(e)=>sendEmail(e)} ref={form} className='flex flex-col gap-4'>
+        <section className='px-6 pt-6 lg:px-20 lg:pt-20 bg-black-100 text-white flex flex-col gap-[3rem] lg:gap-0 lg:flex-row justify-between'>
+            <form onSubmit={(e)=>sendEmail(e)} ref={form} className='flex flex-col gap-4 w-full'>
                 <FormInput name='from_name' placeholder='Full Name' />
                 <FormInput name='phone_email' placeholder='Contact Mail/Phone #' />
                 <FormInput name='message' placeholder='Message' submit={{ show: true, onSubmitHandler:()=>{} }} />

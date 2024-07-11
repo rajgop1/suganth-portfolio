@@ -6,7 +6,8 @@ import LetsGoForTea from "./components/home/lets-go-for-tea";
 import Email from "./components/home/email";
 import Footer from "./components/common/Footer";
 
-export default function Home() {
+export default async function Home() {
+
   return (
     <main className="bg-black-100 ">
       <Landing />

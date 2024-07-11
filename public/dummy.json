@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "slug": "factset",
+        "title": "Factset",
+        "data": [
+            {
+                "mainImage": "",
+                "leftImage": "",
+                "rightSection": {
+                    "company": "",
+                    "paragraph": ""
+                }
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "slug": "doc-search",
+        "title": "Doc Search",
+        "data": [
+            {
+                "mainImage": "",
+                "leftImage": "",
+                "rightSection": {
+                    "company": "",
+                    "paragraph": ""
+                }
+            }
+        ]
+    }
+]

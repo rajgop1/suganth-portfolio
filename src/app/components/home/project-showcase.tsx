@@ -33,7 +33,7 @@ const PROJECT_IMAGES = [
 
 export default function ProjectShowcase() {
     return (
-        <section className='bg-black-100 flex flex-col lg:grid lg:grid-cols-3 gap-4 px-6 pt-6 lg:px-20 lg:pt-20'>
+        <Link href={"/all-projects"} className='bg-black-100 flex flex-col lg:grid lg:grid-cols-3 gap-4 px-6 pt-6 lg:px-20 lg:pt-20'>
             <div className={`${CARD_CLASS} flex items-center col-span-2`}>
                 <div>
                     <span className='text-6xl '>
@@ -164,6 +164,6 @@ export default function ProjectShowcase() {
                     </div>
                 </div>
             </div>
-        </section>
+        </Link>
     )
 }

@@ -1,32 +1,397 @@
-[
-    {
+{
+    "data": [
+      {
         "id": 1,
-        "slug": "factset",
-        "title": "Factset",
-        "data": [
+        "attributes": {
+          "createdAt": "2024-07-14T16:54:42.112Z",
+          "updatedAt": "2024-07-14T16:55:35.553Z",
+          "publishedAt": "2024-07-14T16:55:35.548Z",
+          "title": "Factset",
+          "slug": "factset-docsearch",
+          "sass": true,
+          "desktop_app": true,
+          "web": true,
+          "android": true,
+          "ios": true,
+          "multiport": [
             {
-                "mainImage": "",
-                "leftImage": "",
-                "rightSection": {
-                    "company": "",
-                    "paragraph": ""
+              "id": 1,
+              "description": "Lorem ipsum dolor sit amet consectetur. Scelerisque praesent metus ultrices risus. Varius non laoreet vitae integer posuere. Proin sed amet in scelerisque rhoncus pellentesque quam. Vitae diam mattis amet sit egestas nibh leo lacus diam. Ut sapien ipsum et arcu feugiat rhoncus proin. ",
+              "banner_image": {
+                "data": {
+                  "id": 2,
+                  "attributes": {
+                    "name": "factset-thumbnail.png",
+                    "alternativeText": null,
+                    "caption": null,
+                    "width": 2000,
+                    "height": 1500,
+                    "formats": {
+                      "large": {
+                        "ext": ".png",
+                        "url": "https://suganth-admin-assets.s3.ap-south-1.amazonaws.com/large_factset_thumbnail_a6a57e56ac.png",
+                        "hash": "large_factset_thumbnail_a6a57e56ac",
+                        "mime": "image/png",
+                        "name": "large_factset-thumbnail.png",
+                        "path": null,
+                        "size": 233.88,
+                        "width": 1000,
+                        "height": 750,
+                        "sizeInBytes": 233878
+                      },
+                      "small": {
+                        "ext": ".png",
+                        "url": "https://suganth-admin-assets.s3.ap-south-1.amazonaws.com/small_factset_thumbnail_a6a57e56ac.png",
+                        "hash": "small_factset_thumbnail_a6a57e56ac",
+                        "mime": "image/png",
+                        "name": "small_factset-thumbnail.png",
+                        "path": null,
+                        "size": 70.49,
+                        "width": 500,
+                        "height": 375,
+                        "sizeInBytes": 70488
+                      },
+                      "medium": {
+                        "ext": ".png",
+                        "url": "https://suganth-admin-assets.s3.ap-south-1.amazonaws.com/medium_factset_thumbnail_a6a57e56ac.png",
+                        "hash": "medium_factset_thumbnail_a6a57e56ac",
+                        "mime": "image/png",
+                        "name": "medium_factset-thumbnail.png",
+                        "path": null,
+                        "size": 144.81,
+                        "width": 750,
+                        "height": 563,
+                        "sizeInBytes": 144812
+                      },
+                      "thumbnail": {
+                        "ext": ".png",
+                        "url": "https://suganth-admin-assets.s3.ap-south-1.amazonaws.com/thumbnail_factset_thumbnail_a6a57e56ac.png",
+                        "hash": "thumbnail_factset_thumbnail_a6a57e56ac",
+                        "mime": "image/png",
+                        "name": "thumbnail_factset-thumbnail.png",
+                        "path": null,
+                        "size": 16.83,
+                        "width": 208,
+                        "height": 156,
+                        "sizeInBytes": 16830
+                      }
+                    },
+                    "hash": "factset_thumbnail_a6a57e56ac",
+                    "ext": ".png",
+                    "mime": "image/png",
+                    "size": 207.79,
+                    "url": "https://suganth-admin-assets.s3.ap-south-1.amazonaws.com/factset_thumbnail_a6a57e56ac.png",
+                    "previewUrl": null,
+                    "provider": "aws-s3",
+                    "provider_metadata": null,
+                    "createdAt": "2024-07-14T16:50:01.650Z",
+                    "updatedAt": "2024-07-14T16:54:15.209Z"
+                  }
                 }
-            }
-        ]
-    },
-    {
-        "id": 2,
-        "slug": "doc-search",
-        "title": "Doc Search",
-        "data": [
+              },
+              "image": {
+                "data": {
+                  "id": 2,
+                  "attributes": {
+                    "name": "factset-thumbnail.png",
+                    "alternativeText": null,
+                    "caption": null,
+                    "width": 2000,
+                    "height": 1500,
+                    "formats": {
+                      "large": {
+                        "ext": ".png",
+                        "url": "https://suganth-admin-assets.s3.ap-south-1.amazonaws.com/large_factset_thumbnail_a6a57e56ac.png",
+                        "hash": "large_factset_thumbnail_a6a57e56ac",
+                        "mime": "image/png",
+                        "name": "large_factset-thumbnail.png",
+                        "path": null,
+                        "size": 233.88,
+                        "width": 1000,
+                        "height": 750,
+                        "sizeInBytes": 233878
+                      },
+                      "small": {
+                        "ext": ".png",
+                        "url": "https://suganth-admin-assets.s3.ap-south-1.amazonaws.com/small_factset_thumbnail_a6a57e56ac.png",
+                        "hash": "small_factset_thumbnail_a6a57e56ac",
+                        "mime": "image/png",
+                        "name": "small_factset-thumbnail.png",
+                        "path": null,
+                        "size": 70.49,
+                        "width": 500,
+                        "height": 375,
+                        "sizeInBytes": 70488
+                      },
+                      "medium": {
+                        "ext": ".png",
+                        "url": "https://suganth-admin-assets.s3.ap-south-1.amazonaws.com/medium_factset_thumbnail_a6a57e56ac.png",
+                        "hash": "medium_factset_thumbnail_a6a57e56ac",
+                        "mime": "image/png",
+                        "name": "medium_factset-thumbnail.png",
+                        "path": null,
+                        "size": 144.81,
+                        "width": 750,
+                        "height": 563,
+                        "sizeInBytes": 144812
+                      },
+                      "thumbnail": {
+                        "ext": ".png",
+                        "url": "https://suganth-admin-assets.s3.ap-south-1.amazonaws.com/thumbnail_factset_thumbnail_a6a57e56ac.png",
+                        "hash": "thumbnail_factset_thumbnail_a6a57e56ac",
+                        "mime": "image/png",
+                        "name": "thumbnail_factset-thumbnail.png",
+                        "path": null,
+                        "size": 16.83,
+                        "width": 208,
+                        "height": 156,
+                        "sizeInBytes": 16830
+                      }
+                    },
+                    "hash": "factset_thumbnail_a6a57e56ac",
+                    "ext": ".png",
+                    "mime": "image/png",
+                    "size": 207.79,
+                    "url": "https://suganth-admin-assets.s3.ap-south-1.amazonaws.com/factset_thumbnail_a6a57e56ac.png",
+                    "previewUrl": null,
+                    "provider": "aws-s3",
+                    "provider_metadata": null,
+                    "createdAt": "2024-07-14T16:50:01.650Z",
+                    "updatedAt": "2024-07-14T16:54:15.209Z"
+                  }
+                }
+              }
+            },
             {
-                "mainImage": "",
-                "leftImage": "",
-                "rightSection": {
-                    "company": "",
-                    "paragraph": ""
+              "id": 2,
+              "description": "Lorem ipsum dolor sit amet consectetur. Scelerisque praesent metus ultrices risus. Varius non laoreet vitae integer posuere. Proin sed amet in scelerisque rhoncus pellentesque quam. Vitae diam mattis amet sit egestas nibh leo lacus diam. Ut sapien ipsum et arcu feugiat rhoncus proin. ",
+              "banner_image": {
+                "data": {
+                  "id": 2,
+                  "attributes": {
+                    "name": "factset-thumbnail.png",
+                    "alternativeText": null,
+                    "caption": null,
+                    "width": 2000,
+                    "height": 1500,
+                    "formats": {
+                      "large": {
+                        "ext": ".png",
+                        "url": "https://suganth-admin-assets.s3.ap-south-1.amazonaws.com/large_factset_thumbnail_a6a57e56ac.png",
+                        "hash": "large_factset_thumbnail_a6a57e56ac",
+                        "mime": "image/png",
+                        "name": "large_factset-thumbnail.png",
+                        "path": null,
+                        "size": 233.88,
+                        "width": 1000,
+                        "height": 750,
+                        "sizeInBytes": 233878
+                      },
+                      "small": {
+                        "ext": ".png",
+                        "url": "https://suganth-admin-assets.s3.ap-south-1.amazonaws.com/small_factset_thumbnail_a6a57e56ac.png",
+                        "hash": "small_factset_thumbnail_a6a57e56ac",
+                        "mime": "image/png",
+                        "name": "small_factset-thumbnail.png",
+                        "path": null,
+                        "size": 70.49,
+                        "width": 500,
+                        "height": 375,
+                        "sizeInBytes": 70488
+                      },
+                      "medium": {
+                        "ext": ".png",
+                        "url": "https://suganth-admin-assets.s3.ap-south-1.amazonaws.com/medium_factset_thumbnail_a6a57e56ac.png",
+                        "hash": "medium_factset_thumbnail_a6a57e56ac",
+                        "mime": "image/png",
+                        "name": "medium_factset-thumbnail.png",
+                        "path": null,
+                        "size": 144.81,
+                        "width": 750,
+                        "height": 563,
+                        "sizeInBytes": 144812
+                      },
+                      "thumbnail": {
+                        "ext": ".png",
+                        "url": "https://suganth-admin-assets.s3.ap-south-1.amazonaws.com/thumbnail_factset_thumbnail_a6a57e56ac.png",
+                        "hash": "thumbnail_factset_thumbnail_a6a57e56ac",
+                        "mime": "image/png",
+                        "name": "thumbnail_factset-thumbnail.png",
+                        "path": null,
+                        "size": 16.83,
+                        "width": 208,
+                        "height": 156,
+                        "sizeInBytes": 16830
+                      }
+                    },
+                    "hash": "factset_thumbnail_a6a57e56ac",
+                    "ext": ".png",
+                    "mime": "image/png",
+                    "size": 207.79,
+                    "url": "https://suganth-admin-assets.s3.ap-south-1.amazonaws.com/factset_thumbnail_a6a57e56ac.png",
+                    "previewUrl": null,
+                    "provider": "aws-s3",
+                    "provider_metadata": null,
+                    "createdAt": "2024-07-14T16:50:01.650Z",
+                    "updatedAt": "2024-07-14T16:54:15.209Z"
+                  }
                 }
+              },
+              "image": {
+                "data": {
+                  "id": 2,
+                  "attributes": {
+                    "name": "factset-thumbnail.png",
+                    "alternativeText": null,
+                    "caption": null,
+                    "width": 2000,
+                    "height": 1500,
+                    "formats": {
+                      "large": {
+                        "ext": ".png",
+                        "url": "https://suganth-admin-assets.s3.ap-south-1.amazonaws.com/large_factset_thumbnail_a6a57e56ac.png",
+                        "hash": "large_factset_thumbnail_a6a57e56ac",
+                        "mime": "image/png",
+                        "name": "large_factset-thumbnail.png",
+                        "path": null,
+                        "size": 233.88,
+                        "width": 1000,
+                        "height": 750,
+                        "sizeInBytes": 233878
+                      },
+                      "small": {
+                        "ext": ".png",
+                        "url": "https://suganth-admin-assets.s3.ap-south-1.amazonaws.com/small_factset_thumbnail_a6a57e56ac.png",
+                        "hash": "small_factset_thumbnail_a6a57e56ac",
+                        "mime": "image/png",
+                        "name": "small_factset-thumbnail.png",
+                        "path": null,
+                        "size": 70.49,
+                        "width": 500,
+                        "height": 375,
+                        "sizeInBytes": 70488
+                      },
+                      "medium": {
+                        "ext": ".png",
+                        "url": "https://suganth-admin-assets.s3.ap-south-1.amazonaws.com/medium_factset_thumbnail_a6a57e56ac.png",
+                        "hash": "medium_factset_thumbnail_a6a57e56ac",
+                        "mime": "image/png",
+                        "name": "medium_factset-thumbnail.png",
+                        "path": null,
+                        "size": 144.81,
+                        "width": 750,
+                        "height": 563,
+                        "sizeInBytes": 144812
+                      },
+                      "thumbnail": {
+                        "ext": ".png",
+                        "url": "https://suganth-admin-assets.s3.ap-south-1.amazonaws.com/thumbnail_factset_thumbnail_a6a57e56ac.png",
+                        "hash": "thumbnail_factset_thumbnail_a6a57e56ac",
+                        "mime": "image/png",
+                        "name": "thumbnail_factset-thumbnail.png",
+                        "path": null,
+                        "size": 16.83,
+                        "width": 208,
+                        "height": 156,
+                        "sizeInBytes": 16830
+                      }
+                    },
+                    "hash": "factset_thumbnail_a6a57e56ac",
+                    "ext": ".png",
+                    "mime": "image/png",
+                    "size": 207.79,
+                    "url": "https://suganth-admin-assets.s3.ap-south-1.amazonaws.com/factset_thumbnail_a6a57e56ac.png",
+                    "previewUrl": null,
+                    "provider": "aws-s3",
+                    "provider_metadata": null,
+                    "createdAt": "2024-07-14T16:50:01.650Z",
+                    "updatedAt": "2024-07-14T16:54:15.209Z"
+                  }
+                }
+              }
             }
-        ]
+          ],
+          "thumbnail_image": {
+            "data": {
+              "id": 2,
+              "attributes": {
+                "name": "factset-thumbnail.png",
+                "alternativeText": null,
+                "caption": null,
+                "width": 2000,
+                "height": 1500,
+                "formats": {
+                  "large": {
+                    "ext": ".png",
+                    "url": "https://suganth-admin-assets.s3.ap-south-1.amazonaws.com/large_factset_thumbnail_a6a57e56ac.png",
+                    "hash": "large_factset_thumbnail_a6a57e56ac",
+                    "mime": "image/png",
+                    "name": "large_factset-thumbnail.png",
+                    "path": null,
+                    "size": 233.88,
+                    "width": 1000,
+                    "height": 750,
+                    "sizeInBytes": 233878
+                  },
+                  "small": {
+                    "ext": ".png",
+                    "url": "https://suganth-admin-assets.s3.ap-south-1.amazonaws.com/small_factset_thumbnail_a6a57e56ac.png",
+                    "hash": "small_factset_thumbnail_a6a57e56ac",
+                    "mime": "image/png",
+                    "name": "small_factset-thumbnail.png",
+                    "path": null,
+                    "size": 70.49,
+                    "width": 500,
+                    "height": 375,
+                    "sizeInBytes": 70488
+                  },
+                  "medium": {
+                    "ext": ".png",
+                    "url": "https://suganth-admin-assets.s3.ap-south-1.amazonaws.com/medium_factset_thumbnail_a6a57e56ac.png",
+                    "hash": "medium_factset_thumbnail_a6a57e56ac",
+                    "mime": "image/png",
+                    "name": "medium_factset-thumbnail.png",
+                    "path": null,
+                    "size": 144.81,
+                    "width": 750,
+                    "height": 563,
+                    "sizeInBytes": 144812
+                  },
+                  "thumbnail": {
+                    "ext": ".png",
+                    "url": "https://suganth-admin-assets.s3.ap-south-1.amazonaws.com/thumbnail_factset_thumbnail_a6a57e56ac.png",
+                    "hash": "thumbnail_factset_thumbnail_a6a57e56ac",
+                    "mime": "image/png",
+                    "name": "thumbnail_factset-thumbnail.png",
+                    "path": null,
+                    "size": 16.83,
+                    "width": 208,
+                    "height": 156,
+                    "sizeInBytes": 16830
+                  }
+                },
+                "hash": "factset_thumbnail_a6a57e56ac",
+                "ext": ".png",
+                "mime": "image/png",
+                "size": 207.79,
+                "url": "https://suganth-admin-assets.s3.ap-south-1.amazonaws.com/factset_thumbnail_a6a57e56ac.png",
+                "previewUrl": null,
+                "provider": "aws-s3",
+                "provider_metadata": null,
+                "createdAt": "2024-07-14T16:50:01.650Z",
+                "updatedAt": "2024-07-14T16:54:15.209Z"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "meta": {
+      "pagination": {
+        "page": 1,
+        "pageSize": 25,
+        "pageCount": 1,
+        "total": 1
+      }
     }
-]
+  }

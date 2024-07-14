@@ -12,9 +12,7 @@ export default function AllProjectsLayout({
     return (
         <section className="bg-black-100">
             <Header />
-            <AllProjectComponent>
-                {children}
-            </AllProjectComponent>
+            {children}
             <LetsGoForTea />
             <Email />
             <Footer />

@@ -57,7 +57,7 @@ export default function Footer() {
             <section className='footer flex gap-8 flex-col items-center bg-black-100 text-white px-6 pt-6 lg:px-20 lg:pt-20 justify-between'>
                 <div className='flex flex-col lg:flex-row justify-between items-center w-full'>
                     <div className='flex flex-col lg:flex-row justify-between items-center w-full gap-2 lg:gap-[8rem]'>
-                        <div className='w-[200px] h-[60px] w-[460px] h-[150px] flex-1'>
+                        <div className='w-[200px] h-[60px] lg:w-[460px] lg:h-[150px] flex-1'>
                             <ImageWrapper width={0} height={0} src={"/assets/images/my-sign-white.png"} alt='My Signature White' sizes='100vw' className='w-full h-full object-cover' />
                         </div>
                         <div className='grid grid-cols-2 gap-y-2 flex-1 justify-center '>

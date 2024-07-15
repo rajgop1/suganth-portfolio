@@ -48,6 +48,14 @@ interface Multiport {
     };
 }
 
+interface Singleport {
+    id: number;
+    description: string;
+    banner_image: {
+        data: ImageAttributes;
+    };
+}
+
 
 export type MultiPortfolioPageAttributes = {
     createdAt: string;
@@ -66,9 +74,36 @@ export type MultiPortfolioPageAttributes = {
     };
 };
 
+export type SinglePortfolioPageAttributes = {
+    title: string;
+    organisation:string;
+    slug: string;
+    project_name: string;
+    sass: boolean;
+    desktop_app: boolean;
+    web: boolean;
+    android: boolean;
+    ios: boolean;
+    createdAt: string;
+    updatedAt: string;
+    publishedAt: string;
+    thumbnail_image: {
+        data: ImageAttributes;
+    };
+    singleport: Singleport[];
+    relevent_images:{
+        data: ImageAttributes[]
+    }
+};
+
 export type MultiPortfolioPageData = {
     id: number;
     attributes: MultiPortfolioPageAttributes;
+};
+
+export type SinglePortfolioPageData = {
+    id: number;
+    attributes: SinglePortfolioPageAttributes;
 };
 
 type Pagination = {
@@ -84,5 +119,10 @@ type Meta = {
 
 export type MultiPortfolioPageSchema = {
     data: MultiPortfolioPageData[];
+    meta: Meta;
+};
+
+export type SinglePortfolioPageSchema = {
+    data: SinglePortfolioPageData[];
     meta: Meta;
 };

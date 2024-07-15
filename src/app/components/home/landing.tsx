@@ -203,7 +203,7 @@ const DiceAnimation = ({ isDiceAnimating, setDiceAnimating }: { isDiceAnimating:
         <div className='flex flex-col items-center w-60 gap-10'>
             {
                 isDiceAnimating === false ?
-                    <div onClick={onDiceAnimation}>
+                    <div onClick={onDiceAnimation} className='cursor-pointer'>
                         <ImageWrapper src={dice.src} height={80} width={104} alt={dice.alt} />
                         <ImageWrapper src={"/assets/images/shuffle-arrow.png"} height={80} width={104} alt={dice.alt} />
                     </div> : <ImageWrapper unoptimized src={"/assets/images/dice-animation.gif"} height={70} width={84} alt={dice.alt} />
@@ -217,7 +217,7 @@ const DiceAnimation = ({ isDiceAnimating, setDiceAnimating }: { isDiceAnimating:
 
 const SingleGamepad = ({ isMultiCard }: { isMultiCard: boolean }) => {
     return (
-        <div className={`rounded-full p-6 h-20 w-20 flex justify-center items-center translate-x-0 translate-y-0 group transition-all scale-[0.8] lg:scale-[1] ${isMultiCard === false && "bg-green-100"}`}>
+        <div className={`cursor-pointer rounded-full p-6 h-20 w-20 flex justify-center items-center translate-x-0 translate-y-0 group transition-all scale-[0.8] lg:scale-[1] ${isMultiCard === false && "bg-green-100"}`}>
             <ImageWrapper src={'/assets/images/gamepad-center.png'} alt='Gamepad image center' width={36} height={52} className={`${isMultiCard && 'transition-all	 group-hover:translate-y-[-30%]'} `} />
         </div>
     )
@@ -225,7 +225,7 @@ const SingleGamepad = ({ isMultiCard }: { isMultiCard: boolean }) => {
 
 const MultiGamePad = ({ isMultiCard }: { isMultiCard: boolean }) => {
     return (
-        <div className={`rounded-full p-6 h-20 w-20 flex justify-center items-center translate-x-0 translate-y-0 group z-[1] scale-[0.8] lg:scale-[1] ${isMultiCard === true && "bg-green-100"} ${isMultiCard === false && styles.multiCard}`}>
+        <div className={`cursor-pointer rounded-full p-6 h-20 w-20 flex justify-center items-center translate-x-0 translate-y-0 group z-[1] scale-[0.8] lg:scale-[1] ${isMultiCard === true && "bg-green-100"} ${isMultiCard === false && styles.multiCard}`}>
             <ImageWrapper src={'/assets/images/gamepad-left.png'} alt='Gamepad image center' width={36} height={52} className={`z-[1] relative left-[30%] ${isMultiCard === false && styles.multiCardLeft}`} />
             <ImageWrapper src={'/assets/images/gamepad-center.png'} alt='Gamepad image center' width={36} height={52} className='z-[2]' />
             <ImageWrapper src={'/assets/images/gamepad-right.png'} alt='Gamepad image center' width={36} height={52} className={`z-[1] relative left-[-30%] ${isMultiCard === false && styles.multiCardRight}`} />

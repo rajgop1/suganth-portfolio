@@ -37,7 +37,7 @@ const PROJECT_IMAGES = [
 export default function ProjectShowcase() {
     const router = useRouter()
     return (
-        <section onClick={() => router.push(NAV_ALL_PROJECT)} className='cursor-pointer bg-black-100 flex flex-col lg:grid lg:grid-cols-3 gap-4 px-6 pt-6 lg:px-20 lg:pt-20'>
+        <section className='bg-black-100 flex flex-col lg:grid lg:grid-cols-3 gap-4 px-6 pt-6 lg:px-20 lg:pt-20'>
             <div className={`${CARD_CLASS} flex items-center col-span-2`}>
                 <div>
                     <span className='text-6xl '>
@@ -125,7 +125,7 @@ export default function ProjectShowcase() {
                     </div>
                 </div>
             </div>
-            <div className={`${CARD_CLASS} pb-[4rem] lg:pb-4 col-span-2 justify-between ${GRADIENT_CLASS} flex flex-col lg:flex-row`}>
+            <div onClick={() => router.push(NAV_ALL_PROJECT)} className={`${CARD_CLASS} cursor-pointer pb-[4rem] lg:pb-4 col-span-2 justify-between ${GRADIENT_CLASS} flex flex-col lg:flex-row`}>
                 <div className='flex flex-col justify-between'>
                     <div className='text-3xl font-bold uppercase'>Projects?</div>
                     <div className='flex flex-col gap-4'>

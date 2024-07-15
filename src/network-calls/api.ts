@@ -3,20 +3,20 @@
 
 import { getReqAuth, getReqAuthWithoutToken } from "./network-call";
 
-export async function getSinglePortfolios() {
+export async function getMultiPortfolios() {
     try {
-        const result = await getReqAuth("/api/single-portfolios/")
+        const result = await (await getReqAuthWithoutToken("/api/multi-portfolios?populate=deep")).json()
         console.log("result", result)
         return result
     } catch (err) {
         console.log("err", err)
         return err
     }
-
 }
-export async function getMultiPortfolios() {
+
+export async function getSinglePortfolios() {
     try {
-        const result = await (await getReqAuthWithoutToken("/api/multi-portfolios?populate=deep")).json()
+        const result = await (await getReqAuthWithoutToken("/api/single-portfolios?populate=deep")).json()
         console.log("result", result)
         return result
     } catch (err) {

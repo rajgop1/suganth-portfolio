@@ -87,8 +87,8 @@ export default function SinglePageComponent({ data }: { data: SinglePortfolioPag
           }
           <div className='px-[1rem] py-[1rem] rounded-[0.5rem] lg:px-[2rem] lg:py-[2rem] lg:rounded-[2rem] bg-gray-700 rounded-[2rem] grid md:grid-cols-2 lg:grid-cols-3 gap-[1.5rem]'>
             {
-              data.attributes.relevent_images.data.map((img) => {
-                return <div className='bg-gray-700 h-[16rem] lg:h-[20rem] rounded-[2rem] w-full overflow-hidden'>
+              data.attributes.relevent_images.data.map((img, index) => {
+                return <div key={index} className='bg-gray-700 h-[16rem] lg:h-[20rem] rounded-[2rem] w-full overflow-hidden'>
                   <ImageWrapper alt={img.attributes.formats.large.url || ""} src={img.attributes.formats.large.url} width={0} height={0} sizes='100vw' className='w-full h-full object-cover' />
                 </div>
               })

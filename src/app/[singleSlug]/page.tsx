@@ -10,8 +10,8 @@ type SinglePortfolioPageParams = {
 }
 
 export async function generateStaticParams() {
-    // const result: any = await getSinglePortfolios()
-    const result = singlePortJSON
+    const result: any = await getSinglePortfolios()
+    // const result = singlePortJSON
     const posts: SinglePortfolioPageSchema = result
 
     return posts.data.map((post) => {

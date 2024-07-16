@@ -3,6 +3,8 @@ import Image from 'next/image'
 import React, { Fragment } from 'react'
 import ImageWrapper from '../common/ImageWrapper'
 import { Separator } from '../common/Separator'
+import { SinglePortfolioPageSchema } from '@/interface/api-interface'
+import { useRouter } from 'next/navigation'
 
 const PORTFOLIO_AND_UIUX_DESIGN_DATA = [
     {
@@ -67,7 +69,8 @@ const PORTFOLIO_AND_UIUX_DESIGN_DATA = [
     },
 ]
 
-export default function PortfolioAndUxDesign() {
+export default function PortfolioAndUxDesign({singlePortfolio}:{singlePortfolio:SinglePortfolioPageSchema}) {
+    const router = useRouter()
     return (
         <section className='bg-black-100 text-white px-6 pt-6 lg:px-20 lg:pt-20'>
             <div className='uppercase text-3xl font-bold'>Portfolio - UX & UI Design</div>
@@ -76,17 +79,18 @@ export default function PortfolioAndUxDesign() {
             </div>
             <section className='flex flex-col gap-y-[1rem] lg:gap-y-0 lg:grid grid-cols-3 gap-x-[2rem]'>
                 {
-                    PORTFOLIO_AND_UIUX_DESIGN_DATA.map((card, index) => {
-                        const projects = card.projects > 5 ? "5+ Projects" : `${card.projects} Projects`
+                    singlePortfolio.data.map((card, index) => {
+                        // const projects = card.projects > 5 ? "5+ Projects" : `${card.projects} Projects`
+                        const projects = card.attributes.organisation
 
                         return <Fragment key={card.id}>
-                            <div className='rounded-[20px] bg-gray-700 flex flex-col gap-[1.6rem] p-8 tracking-[0.25rem]'>
-                                <div className='uppercase text-xl font-semibold'>{card.title}</div>
+                            <div onClick={()=>router.push(`/${card.attributes.slug}`)} className='cursor-pointer rounded-[20px] bg-gray-700 flex flex-col gap-[1.6rem] p-8 tracking-[0.25rem]'>
+                                <div className='uppercase text-xl font-semibold'>{card.attributes.sector}</div>
                                 <div className='h-[260px]'>
-                                    <ImageWrapper width={0} height={0} sizes='100vw' className='w-full h-full rounded-[20px] object-cover' alt={card.title} src={card.img} />
+                                    <ImageWrapper width={0} height={0} sizes='100vw' className='w-full h-full rounded-[20px] object-cover' alt={card.attributes.thumbnail_image.data.attributes.alternativeText || `${card.attributes.project_name} image`} src={card.attributes.thumbnail_image.data.attributes.url} />
                                 </div>
                                 <div className='flex flex-row gap-3 justify-center items-center'>
-                                    <div className='text-xs lg:text-md font-bold uppercase opacity-[0.5]'>{card.company}</div>
+                                    <div className='text-xs lg:text-md font-bold uppercase opacity-[0.5]'>{card.attributes.project_name}</div>
                                     <div className='h-[0.5rem] w-[0.5rem] rounded-full bg-white'></div>
                                     <div className='uppercase font-bold text-xs lg:text-md'>
                                         {projects}

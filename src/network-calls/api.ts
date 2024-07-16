@@ -14,6 +14,17 @@ export async function getMultiPortfolios() {
     }
 }
 
+export async function getHomePageGridCard() {
+    try {
+        const result = await (await getReqAuthWithoutToken("api/home-page-grid-card?populate=deep")).json()
+        console.log("result", result)
+        return result
+    } catch (err) {
+        console.log("err", err)
+        return err
+    }
+}
+
 export async function getSinglePortfolios() {
     try {
         const result = await (await getReqAuthWithoutToken("/api/single-portfolios?populate=deep")).json()

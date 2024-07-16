@@ -7,6 +7,8 @@ import ImageWrapper from '../common/ImageWrapper'
 import { BASE_PATH_IMAGE } from '@/constants/configuration'
 import { useRouter } from 'next/navigation'
 import { NAV_ALL_PROJECT } from '@/constants/navigation'
+import { HomePageGridCard } from '@/interface/api-interface'
+import { LINK_INSTA, LINK_LINKEDIN, LINK_MAIL } from '@/constants/links'
 
 const CARD_CLASS = 'px-6 py-4 border border-gray-100 rounded-[20px] text-white'
 const GRADIENT_CLASS = 'bg-gradient-to-br from-[#3C3C3C] to-[#070809]'
@@ -34,7 +36,7 @@ const PROJECT_IMAGES = [
     },
 ]
 
-export default function ProjectShowcase() {
+export default function ProjectShowcase({homePageGridCard}:{homePageGridCard:HomePageGridCard}) {
     const router = useRouter()
     return (
         <section className='bg-black-100 flex flex-col lg:grid lg:grid-cols-3 gap-4 px-6 pt-6 lg:px-20 lg:pt-20'>
@@ -86,13 +88,13 @@ export default function ProjectShowcase() {
                     <div className='flex flex-col gap-[8px]'>
                         <div className='text-2xl'>Connect with me</div>
                         <div className='flex flex-row gap-2 justify-end'>
-                            <Link href="/" className='bg-black-200 border border-gray-400 p-[8px] flex flex-row justify-center items-center rounded-full h-[35px] w-[35px]'>
+                            <Link href={LINK_MAIL} className='bg-black-200 border border-gray-400 p-[8px] flex flex-row justify-center items-center rounded-full h-[35px] w-[35px]'>
                                 <ImageWrapper src="/assets/images/gmail.png" alt='Gmail' width={200} height={200} className='w-full h-full object-contain' />
                             </Link>
-                            <Link href="/" className='bg-black-200 border border-gray-400 p-[8px] flex flex-row justify-center items-center rounded-full h-[35px] w-[35px]'>
+                            <Link href={LINK_INSTA} className='bg-black-200 border border-gray-400 p-[8px] flex flex-row justify-center items-center rounded-full h-[35px] w-[35px]'>
                                 <ImageWrapper src="/assets/images/instagram.png" alt='Instagram' width={200} height={200} className='w-full h-full object-contain' />
                             </Link>
-                            <Link href="/" className='bg-black-200 border border-gray-400 p-[8px] flex flex-row justify-center items-center rounded-full h-[35px] w-[35px]'>
+                            <Link href={LINK_LINKEDIN} className='bg-black-200 border border-gray-400 p-[8px] flex flex-row justify-center items-center rounded-full h-[35px] w-[35px]'>
                                 <ImageWrapper src="/assets/images/linkedin.png" alt='Linkedin' width={200} height={200} className='w-full h-full object-contain' />
                             </Link>
                         </div>
@@ -115,13 +117,16 @@ export default function ProjectShowcase() {
                     <div className='text-lg font-semibold text-center tracking-[0.25rem] uppercase'>Expert - Design Trend </div>
                 </div>
                 <div className={`${CARD_CLASS} flex-1`}>
-                    <div className={`flex flex-col gap-2 justify-end bg-[url("/assets/images/bento-box.png")] bg-cover bg-no-repeat h-full rounded-[10px] ${styles.bentoBoxBg}`}>
+                    <div className={`flex flex-col gap-2 justify-end bg-[url(${homePageGridCard.data.attributes.link ?? "/assets/images/bento-box.png"})] bg-cover bg-no-repeat h-full rounded-[10px] ${styles.bentoBoxBg}`}>
                         <span className='px-4 text-2xl font-bold'>
-                            Bento Box
+                            {homePageGridCard.data.attributes.title}
                         </span>
                         <span className='px-4 pb-2 text-sm font-semibold'>
-                            Grid-based approach, where content is organised into distinct 'cells' that work together to create aesthetically pleasing user interfaces and a strong content hierarchy
+                            {homePageGridCard.data.attributes.description}
                         </span>
+                        <Link target='_blank' className='px-4 pb-2 underline' href={homePageGridCard.data.attributes.link}>
+                            Link
+                        </Link>
                     </div>
                 </div>
             </div>

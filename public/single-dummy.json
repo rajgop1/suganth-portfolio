@@ -3,7 +3,7 @@
       {
         "id": 1,
         "attributes": {
-          "title": "Doc search",
+          "sector": "AI",
           "organisation": "DOC SEARCH",
           "slug": "docsearch",
           "project_name": "Doc search",
@@ -162,7 +162,8 @@
                     "updatedAt": "2024-07-14T16:54:15.209Z"
                   }
                 }
-              }
+              },
+              "title":""
             },
             {
               "id": 2,
@@ -238,7 +239,8 @@
                     "updatedAt": "2024-07-14T16:54:15.209Z"
                   }
                 }
-              }
+              },
+              "title":""
             }
           ],
           "relevent_images": {

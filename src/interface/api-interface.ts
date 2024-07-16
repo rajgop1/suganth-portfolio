@@ -46,6 +46,13 @@ interface Multiport {
     image: {
         data: ImageAttributes;
     };
+    title:string;
+    link_to:string;
+    sass: boolean;
+    desktop_app: boolean;
+    web: boolean;
+    android: boolean;
+    ios: boolean;
 }
 
 interface Singleport {
@@ -54,6 +61,8 @@ interface Singleport {
     banner_image: {
         data: ImageAttributes;
     };
+    title:string;
+    
 }
 
 
@@ -61,7 +70,9 @@ export type MultiPortfolioPageAttributes = {
     createdAt: string;
     updatedAt: string;
     publishedAt: string;
-    title: string;
+    organisation:string;
+    project_name:string;
+    sector: string;
     slug: string;
     sass: boolean;
     desktop_app: boolean;
@@ -75,8 +86,8 @@ export type MultiPortfolioPageAttributes = {
 };
 
 export type SinglePortfolioPageAttributes = {
-    title: string;
-    organisation:string;
+    sector: string;
+    organisation: string;
     slug: string;
     project_name: string;
     sass: boolean;
@@ -91,7 +102,7 @@ export type SinglePortfolioPageAttributes = {
         data: ImageAttributes;
     };
     singleport: Singleport[];
-    relevent_images:{
+    relevent_images: {
         data: ImageAttributes[]
     }
 };
@@ -126,3 +137,18 @@ export type SinglePortfolioPageSchema = {
     data: SinglePortfolioPageData[];
     meta: Meta;
 };
+
+export interface HomePageGridCard {
+    data: {
+        id: number;
+        attributes: {
+            title: string;
+            description: string;
+            link: string;
+            createdAt: string;
+            updatedAt: string;
+            publishedAt: string;
+        };
+    };
+    meta: object; // Assuming meta is empty, but it can be defined with specific fields if needed
+}

@@ -30,7 +30,7 @@ export default function SinglePageComponent({ data }: { data: SinglePortfolioPag
             </button>
             <IoHomeOutline className='text-green-100 lg:w-[28px] lg:h-[28px]' />
             <div className='text-xs lg:text-base text-gray-800 font-bold uppercase'>
-              HOME / {' '} <span className='text-green-100'>{data.attributes.title}</span>
+              HOME / {' '} <span className='text-green-100'>{data.attributes.sector}</span>
             </div>
           </div>
           <div className='uppercase flex flex-row gap-2 text-lg lg:text-3xl text-gray-300 font-bold items-center'>
@@ -39,12 +39,12 @@ export default function SinglePageComponent({ data }: { data: SinglePortfolioPag
         </div>
         <Separator />
         <div className='flex flex-col gap-[2rem]'>
-          <h2 className='uppercase text-4xl font-bold text-center'>{data.attributes.title}</h2>
+          <h2 className='uppercase text-4xl font-bold text-center'>{data.attributes.project_name}</h2>
           <div className='px-[1rem] py-[1rem] rounded-[0.5rem] lg:px-[2rem] lg:py-[2rem] lg:rounded-[2rem] bg-gray-700 rounded-[2rem]'>
             <div className='flex flex-col gap-6'>
               <div className='flex flex-row items-center justify-between'>
                 <div className='font-bold uppercase text-gray-300 lg:text-2xl'>
-                  {data.attributes.title}
+                  {data.attributes.project_name}
                 </div>
                 <div className='flex flex-row gap-2'>
                   {data.attributes.ios && <div className='w-[1.5rem] h-[1.5rem] rounded-full overflow-hidden'>

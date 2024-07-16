@@ -64,7 +64,7 @@ export default function AllProjectComponent({ data }: { data: MultiPortfolioPage
                 <div className='w-[3rem] h-[3rem] rounded-full overflow-hidden'>
                   <ImageWrapper alt={project.attributes.thumbnail_image.data.attributes.alternativeText || ""} src={project.attributes.thumbnail_image.data.attributes.formats.thumbnail.url} width={0} height={0} sizes='100vw' className='w-full h-full object-cover' />
                 </div>
-                <div className='uppercase text-white'>{project.attributes.title}</div>
+                <div className='uppercase text-white'>{project.attributes.sector}</div>
                 {project.id === selectedPage.id && <div className='absolute top-[50%] translate-y-[-50%] translate-x-[50%] right-[0%] p-1.5 rounded-full bg-green-100'>
                   <GoArrowRight size={32} />
                 </div>}
@@ -76,7 +76,7 @@ export default function AllProjectComponent({ data }: { data: MultiPortfolioPage
               <div className='flex flex-col gap-6'>
                 <div className='flex flex-row items-center justify-between'>
                   <div className='font-bold uppercase text-gray-300 lg:text-2xl'>
-                    {selectedPage.attributes.title}
+                    {selectedPage.attributes.project_name}
                   </div>
                   <div className='flex flex-row gap-2'>
                     {selectedPage.attributes.ios && <div className='w-[1.5rem] h-[1.5rem] rounded-full overflow-hidden'>

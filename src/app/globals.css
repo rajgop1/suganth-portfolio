@@ -41,8 +41,8 @@ body {
 }
 
 .single-port h1 {
-  font-size: 2rem;
-  line-height: 2.5rem;
+  font-size: 1.25rem;
+  line-height:1.85rem;
   color: white;
   margin-top: 2rem;
   margin-bottom: 1.5rem;
@@ -51,7 +51,8 @@ body {
 }
 
 .single-port p {
-  font-size: 1rem;
+  font-size: 1.25rem;
+  line-height:1.85rem;
   color: var(--gray-300);
   margin-block: 0.75rem;
   line-height: 1.6rem;
@@ -59,7 +60,8 @@ body {
 
 .single-port ul,
 .single-port ol {
-  font-size: 1rem;
+  font-size: 1.25rem;
+  line-height:1.85rem;
   color: var(--gray-300);
   margin-top: 2rem;
   margin-block: 1rem;
@@ -99,17 +101,15 @@ body {
 
 
 .single-port ul {
-  font-size: 1rem;
+  font-size: 1.25rem;
+  line-height:1.85rem;
   color: var(--gray-300);
-  margin-block: 1rem;
-
   margin-block: 0.5rem;
 }
 
 .single-port ol {
-  font-size: 1rem;
+  font-size: 1.25rem;
+  line-height:1.85rem;
   color: var(--gray-300);
-  margin-block: 1rem;
-
   margin-block: 0.5rem;
 }

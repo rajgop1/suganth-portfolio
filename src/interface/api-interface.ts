@@ -1,3 +1,12 @@
+export type AppIconsInterface = {
+    sass: boolean;
+    desktop_app: boolean;
+    web: boolean;
+    android: boolean;
+    ios: boolean;
+}
+
+
 type ImageFormat = {
     ext: string;
     url: string;
@@ -37,7 +46,7 @@ type ImageAttributes = {
     }
 };
 
-interface Multiport {
+interface Multiport extends AppIconsInterface{
     id: number;
     description: string;
     banner_image: {
@@ -46,14 +55,10 @@ interface Multiport {
     image: {
         data: ImageAttributes;
     };
-    title:string;
+    project_name:string;
+    sector:string;
     link_to:string;
-    sass: boolean;
-    desktop_app: boolean;
-    web: boolean;
-    android: boolean;
-    ios: boolean;
-}
+} ;
 
 interface Singleport {
     id: number;
@@ -61,8 +66,8 @@ interface Singleport {
     banner_image: {
         data: ImageAttributes;
     };
-    title:string;
-    
+    two_column_layout:boolean;
+    card_style_background:boolean
 }
 
 
@@ -70,31 +75,21 @@ export type MultiPortfolioPageAttributes = {
     createdAt: string;
     updatedAt: string;
     publishedAt: string;
-    organisation:string;
+    organisation:{organisation:string};
     project_name:string;
     sector: string;
     slug: string;
-    sass: boolean;
-    desktop_app: boolean;
-    web: boolean;
-    android: boolean;
-    ios: boolean;
     multiport: Multiport[];
     thumbnail_image: {
         data: ImageAttributes;
     };
-};
+} & AppIconsInterface;
 
 export type SinglePortfolioPageAttributes = {
     sector: string;
-    organisation: string;
+    organisation:{organisation: string};
     slug: string;
     project_name: string;
-    sass: boolean;
-    desktop_app: boolean;
-    web: boolean;
-    android: boolean;
-    ios: boolean;
     createdAt: string;
     updatedAt: string;
     publishedAt: string;
@@ -105,7 +100,7 @@ export type SinglePortfolioPageAttributes = {
     relevent_images: {
         data: ImageAttributes[]
     }
-};
+} & AppIconsInterface;
 
 export type MultiPortfolioPageData = {
     id: number;

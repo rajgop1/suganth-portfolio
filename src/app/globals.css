@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --gray-300: #717171;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -37,4 +38,78 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.single-port h1 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: white;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+}
+
+.single-port p {
+  font-size: 1rem;
+  color: var(--gray-300);
+  margin-block: 0.75rem;
+  line-height: 1.6rem;
+}
+
+.single-port ul,
+.single-port ol {
+  font-size: 1rem;
+  color: var(--gray-300);
+  margin-top: 2rem;
+  margin-block: 1rem;
+  list-style-type: initial;
+  margin: initial;
+  padding: initial;
+  letter-spacing: 0.05rem;
+}
+
+.single-port ol {
+  list-style-type: decimal;
+}
+
+.single-port ol ol {
+  list-style-type: lower-alpha;
+}
+
+.single-port ol ol ol {
+  list-style-type: lower-roman;
+}
+
+.single-port ol ol ol ol {
+  list-style-type: upper-alpha;
+}
+
+.single-port ol ol ol ol ol {
+  list-style-type: upper-roman;
+}
+
+.single-port ul li,
+.single-port ol li {
+  margin-left: 1rem;
+  margin-top: 0.15rem;
+  margin-bottom: 0.25rem;
+}
+
+
+
+.single-port ul {
+  font-size: 1rem;
+  color: var(--gray-300);
+  margin-block: 1rem;
+
+  margin-block: 0.5rem;
+}
+
+.single-port ol {
+  font-size: 1rem;
+  color: var(--gray-300);
+  margin-block: 1rem;
+
+  margin-block: 0.5rem;
 }

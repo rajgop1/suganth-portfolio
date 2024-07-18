@@ -20,7 +20,7 @@ export default async function Home() {
   return (
     <main className="bg-black-100 ">
       <Landing />
-      <ProjectShowcase homePageGridCard={gridCard}/>
+      <ProjectShowcase homePageGridCard={gridCard} numberOfProjects={singlePortflio.data.length}/>
       <PortfolioAndUxDesign singlePortfolio={singlePortflio}/>
       <LetsGoForTea/>
       <Email/>

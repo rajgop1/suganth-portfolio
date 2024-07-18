@@ -36,7 +36,7 @@ const PROJECT_IMAGES = [
     },
 ]
 
-export default function ProjectShowcase({homePageGridCard}:{homePageGridCard:HomePageGridCard}) {
+export default function ProjectShowcase({homePageGridCard, numberOfProjects}:{homePageGridCard:HomePageGridCard, numberOfProjects:number}) {
     const router = useRouter()
     return (
         <section className='bg-black-100 flex flex-col lg:grid lg:grid-cols-3 gap-4 px-6 pt-6 lg:px-20 lg:pt-20'>
@@ -140,7 +140,7 @@ export default function ProjectShowcase({homePageGridCard}:{homePageGridCard:Hom
                                 UX Case studies
                             </div>
                             <div className='text-lg font-medium'>
-                                13 project
+                                {numberOfProjects  > 1 ? `${numberOfProjects} projects`: `${numberOfProjects} project`} 
                             </div>
                         </div>
                     </div>

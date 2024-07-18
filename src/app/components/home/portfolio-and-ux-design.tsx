@@ -81,10 +81,10 @@ export default function PortfolioAndUxDesign({singlePortfolio}:{singlePortfolio:
                 {
                     singlePortfolio.data.map((card, index) => {
                         // const projects = card.projects > 5 ? "5+ Projects" : `${card.projects} Projects`
-                        const projects = card.attributes.organisation
+                        const projects = card.attributes.organisation.organisation
 
                         return <Fragment key={card.id}>
-                            <div onClick={()=>router.push(`/${card.attributes.slug}`)} className='cursor-pointer rounded-[20px] bg-gray-700 flex flex-col gap-[1.6rem] p-8 tracking-[0.25rem]'>
+                            <div onClick={()=>router.push(`/all-projects/${card.attributes.slug}`)} className='cursor-pointer rounded-[20px] bg-gray-700 flex flex-col gap-[1.6rem] p-8 tracking-[0.25rem]'>
                                 <div className='uppercase text-xl font-semibold'>{card.attributes.sector}</div>
                                 <div className='h-[260px]'>
                                     <ImageWrapper width={0} height={0} sizes='100vw' className='w-full h-full rounded-[20px] object-cover' alt={card.attributes.thumbnail_image.data.attributes.alternativeText || `${card.attributes.project_name} image`} src={card.attributes.thumbnail_image.data.attributes.url} />

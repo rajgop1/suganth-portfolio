@@ -14,11 +14,11 @@ import Footer from '@/app/components/common/Footer'
 
 export default function SinglePageComponent({ data }: { data: SinglePortfolioPageData }) {
 
+  console.log("data", data)
   const router = useRouter()
 
   return (
     <div className='bg-black-100 min-h-[100vh]'>
-      <Header />
       <div className='px-6 pt-6 lg:px-20 lg:pt-20 text-white'>
         <div className='flex flex-row items-center justify-between gap-2'>
           <div className='flex flex-row gap-2 lg:gap-4 items-center '>
@@ -30,11 +30,11 @@ export default function SinglePageComponent({ data }: { data: SinglePortfolioPag
             </button>
             <IoHomeOutline className='text-green-100 lg:w-[28px] lg:h-[28px]' />
             <div className='text-xs lg:text-base text-gray-800 font-bold uppercase'>
-              HOME / {' '} <span className='text-green-100'>{data.attributes.sector}</span>
+              <span className='cursor-pointer' onClick={() => router.push("/")}> HOME </span> / <span className='cursor-pointer' onClick={() => router.push("/all-projects")}>ALL PROJECT </span>/ {' '} <span className='text-green-100'>{data.attributes.sector}</span>
             </div>
           </div>
           <div className='uppercase flex flex-row gap-2 text-lg lg:text-3xl text-gray-300 font-bold items-center'>
-            {data.attributes.organisation}
+            {data.attributes.organisation.organisation}
           </div>
         </div>
         <Separator />
@@ -43,8 +43,14 @@ export default function SinglePageComponent({ data }: { data: SinglePortfolioPag
           <div className='px-[1rem] py-[1rem] rounded-[0.5rem] lg:px-[2rem] lg:py-[2rem] lg:rounded-[2rem] bg-gray-700 rounded-[2rem]'>
             <div className='flex flex-col gap-6'>
               <div className='flex flex-row items-center justify-between'>
-                <div className='font-bold uppercase text-gray-300 lg:text-2xl'>
-                  {data.attributes.project_name}
+                <div className='flex flex-row items-center flex gap-[1rem]'>
+                  <div className='font-bold uppercase text-gray-300 lg:text-2xl'>
+                    {data.attributes.organisation.organisation}
+                  </div>
+                  <div className='h-[0.5rem] w-[0.5rem] bg-white rounded-full'></div>
+                  <div className='font-bold uppercase lg:text-2xl'>
+                    {data.attributes.sector}
+                  </div>
                 </div>
                 <div className='flex flex-row gap-2'>
                   {data.attributes.ios && <div className='w-[1.5rem] h-[1.5rem] rounded-full overflow-hidden'>
@@ -66,22 +72,22 @@ export default function SinglePageComponent({ data }: { data: SinglePortfolioPag
           {
             data.attributes.singleport.map((project, index) => {
               const isOdd = index % 2 == 1
-              return <div key={project.id} className={`flex flex-col gap-[1rem]`}>
+              const isBannerImage = project.banner_image.data?.attributes?.url
+              return <div key={project.id} className={`flex flex-col gap-[1rem] single-port`}>
                 <div className={`flex gap-[1rem] flex-col ${isOdd ? "lg:flex-row-reverse" : "lg:flex-row"}`}>
-                  <div className='flex-1 px-[1rem] py-[1rem] rounded-[0.5rem] lg:px-[2rem] lg:py-[2rem] lg:rounded-[2rem] flex items-center justify-center'>
-                    <div className='h-[68%] w-[40%] overflow-hidden'>
+                  {project.two_column_layout && <div className='w-full lg:w-[30%] px-[1rem] py-[1rem] rounded-[0.5rem] lg:px-[2rem] lg:py-[2rem] lg:rounded-[2rem] flex items-center justify-center'>
+                    <div className='w-[50%] overflow-hidden'>
                       <ImageWrapper alt={"gamepad-big"} src={isOdd ? "/assets/images/gamepad-big.png" : "/assets/images/gamepad-big.png"} width={0} height={0} sizes='100vw' className='w-full h-full object-cover' />
                     </div>
-                  </div>
-                  <div className='flex-1 px-[1rem] py-[1rem] rounded-[0.5rem] lg:px-[2rem] lg:py-[2rem] lg:rounded-[2rem] bg-gray-700 rounded-[2rem]'>
-                    <div className='text-gray-300 font-bold'>
-                      {project.description}
+                  </div>}
+                  <div className={`w-full lg:w-[70%] flex-1 px-[1rem] py-[1rem] rounded-[0.5rem] lg:px-[2rem] lg:py-[2rem] lg:rounded-[2rem] ${project.card_style_background && "bg-gray-700 rounded-[2rem]"} `}>
+                    <div className='text-gray-300 font-bold' dangerouslySetInnerHTML={{__html:project.description}}>
                     </div>
                   </div>
                 </div>
-                <div className='px-[1rem] py-[1rem] rounded-[0.5rem] lg:px-[2rem] lg:py-[2rem] lg:rounded-[2rem] bg-gray-700 rounded-[2rem] h-[20rem] lg:h-[30rem] w-full overflow-hidden'>
+                {isBannerImage && <div className='px-[1rem] py-[1rem] rounded-[0.5rem] lg:px-[2rem] lg:py-[2rem] lg:rounded-[2rem] bg-gray-700 rounded-[2rem] h-[20rem] lg:h-[30rem] w-full overflow-hidden'>
                   <ImageWrapper alt={project.banner_image.data.attributes.alternativeText || ""} src={project.banner_image.data.attributes.formats.large.url} width={0} height={0} sizes='100vw' className='w-full h-full object-cover' />
-                </div>
+                </div>}
               </div>
             })
           }
@@ -99,13 +105,10 @@ export default function SinglePageComponent({ data }: { data: SinglePortfolioPag
           <div className='h-[200px] w-[140px] lg:h-[400px] lg:w-[280px] overflow-hidden'>
             <ImageWrapper alt={"gamepad big bye"} src={"/assets/images/gamepad-big-bye.png"} width={0} height={0} sizes='100vw' className='w-full h-full object-cover' />
           </div>
-          <div className='text-2xl lg:text-4xl font-bold text-gray-300 text-center'>It’s end, <br/>
+          <div className='text-2xl lg:text-4xl font-bold text-gray-300 text-center'>It’s end, <br />
             See you on next project</div>
         </div>
       </div>
-      <LetsGoForTea />
-      <Email />
-      <Footer />
     </div>
   )
 }

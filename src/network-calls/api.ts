@@ -58,7 +58,7 @@ export async function getMultiPortfoliosBySlug(slug: string) {
 }
 export async function getMultiPortfoliosBySlugV2(slug: string) {
     try {
-        const result = await (await getReqAuthWithoutToken(`/api/multi-portfolios?filters[slug][$eq]=${slug}?populate=deep`)).json()
+        const result = await (await getReqAuthWithoutToken(`/api/multi-portfolios?filters[slug][$eq]=${slug}&populate=deep`)).json()
         console.log("result", result)
         return result
     } catch (err) {
@@ -69,7 +69,7 @@ export async function getMultiPortfoliosBySlugV2(slug: string) {
 
 export async function getSinglePortfoliosBySlugV2(slug: string) {
     try {
-        const result = await (await getReqAuthWithoutToken(`/api/single-portfolios?filters[slug][$eq]=${slug}?populate=deep`)).json()
+        const result = await (await getReqAuthWithoutToken(`/api/single-portfolios?filters[slug][$eq]=${slug}&populate=deep`)).json()
         console.log("result", result)
         return result
     } catch (err) {

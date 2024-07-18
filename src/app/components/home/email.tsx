@@ -42,16 +42,16 @@ export default function Email() {
             <div className='flex flex-1 flex-col justify-center items-center gap-4'>
                 <div className='uppercase font-medium'>Connect with me</div>
                 <div className='flex flex-row gap-2 justify-end'>
-                    <Link href={`mailto:${LINK_MAIL}`} className='bg-black-200 border border-gray-400 p-[8px] flex flex-row justify-center items-center rounded-full h-[35px] w-[35px]'>
+                    <Link target='_blank' href={`mailto:${LINK_MAIL}`} className='bg-black-200 border border-gray-400 p-[8px] flex flex-row justify-center items-center rounded-full h-[35px] w-[35px]'>
                         <ImageWrapper src="/assets/images/gmail.png" alt='Gmail' width={200} height={200} className='w-full h-full object-contain' />
                     </Link>
-                    <Link href={LINK_INSTA} className='bg-black-200 border border-gray-400 p-[8px] flex flex-row justify-center items-center rounded-full h-[35px] w-[35px]'>
+                    <Link target='_blank' href={LINK_INSTA} className='bg-black-200 border border-gray-400 p-[8px] flex flex-row justify-center items-center rounded-full h-[35px] w-[35px]'>
                         <ImageWrapper src="/assets/images/instagram.png" alt='Instagram' width={200} height={200} className='w-full h-full object-contain' />
                     </Link>
-                    <Link href={LINK_LINKEDIN} className='bg-black-200 border border-gray-400 p-[8px] flex flex-row justify-center items-center rounded-full h-[35px] w-[35px]'>
+                    <Link target='_blank' href={LINK_LINKEDIN} className='bg-black-200 border border-gray-400 p-[8px] flex flex-row justify-center items-center rounded-full h-[35px] w-[35px]'>
                         <ImageWrapper src="/assets/images/linkedin.png" alt='Linkedin' width={200} height={200} className='w-full h-full object-contain' />
                     </Link>
-                    <Link href={LINK_WHATSAPP} className='bg-black-200 border border-gray-400 p-[8px] flex flex-row justify-center items-center rounded-full h-[35px] w-[35px]'>
+                    <Link target='_blank' href={LINK_WHATSAPP} className='bg-black-200 border border-gray-400 p-[8px] flex flex-row justify-center items-center rounded-full h-[35px] w-[35px]'>
                         <ImageWrapper src="/assets/images/whatsapp.png" alt='Whatsapp' width={200} height={200} className='w-full h-full object-contain' />
                     </Link>
                 </div>

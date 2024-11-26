@@ -60,7 +60,7 @@ const COMPANIES = [
         path: "/assets/images/mtx-white.png"
     },
     {
-        label: "MTX",
+        label: "Intell Design",
         path: "/assets/images/intell-design.png"
     }
 ]
@@ -163,7 +163,7 @@ export default function ProjectShowcase({homePageGridCard, numberOfProjects}:{ho
                         <div className='w-full'>
                             <div className='flex gap-4'>
                                 {COMPANIES.map(company=>(
-                                    <div className={`${CARD_CLASS} ${GRADIENT_CLASS} flex flex-col justify-center items-center`}>
+                                    <div key={company.label} className={`${CARD_CLASS} ${GRADIENT_CLASS} flex flex-col justify-center items-center`}>
                                         <ImageWrapper src={company.path} alt='' width={"300"} height={"30"} className=''/>
                                     </div>
                                 )) }

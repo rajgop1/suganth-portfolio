@@ -7,6 +7,7 @@ import Email from "./components/home/email";
 import Footer from "./components/common/Footer";
 import { getHomePageGridCard, getSinglePortfolios } from "@/network-calls/api";
 import { HomePageGridCard, SinglePortfolioPageSchema } from "@/interface/api-interface";
+import HomeAboutMeCard from "./components/home/home-about-me-card";
 
 export default async function Home() {
 
@@ -18,13 +19,13 @@ export default async function Home() {
 
 
   return (
-    <main className="bg-black-100 ">
-      <Landing />
-      <ProjectShowcase homePageGridCard={gridCard} numberOfProjects={singlePortflio.data.length}/>
-      <PortfolioAndUxDesign singlePortfolio={singlePortflio}/>
-      <LetsGoForTea/>
-      <Email/>
-      <Footer/>
+    <main className="bg-black-100 md:h-screen">
+      {/* <Landing /> */}
+      <ProjectShowcase homePageGridCard={gridCard} numberOfProjects={singlePortflio.data?.length}/>
+      {/* <PortfolioAndUxDesign singlePortfolio={singlePortflio}/> */}
+      {/* <LetsGoForTea/> */}
+      {/* <Email/> */}
+      {/* <Footer/> */}
     </main>
   );
 }

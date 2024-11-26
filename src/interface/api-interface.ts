@@ -143,6 +143,12 @@ export interface HomePageGridCard {
             createdAt: string;
             updatedAt: string;
             publishedAt: string;
+            linkedin_link: string;
+            insta_link: string;
+            email: string;
+            pdf_link: string;
+            contact_number: string
+            
         };
     };
     meta: object; // Assuming meta is empty, but it can be defined with specific fields if needed

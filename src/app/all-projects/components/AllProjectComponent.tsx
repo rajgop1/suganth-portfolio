@@ -28,7 +28,7 @@ export default function AllProjectComponent({ data }: { data: MultiPortfolioPage
     }
   })
 
-  console.log("selected project", selectedPage)
+  // console.log("selected project", selectedPage)
 
 
   return (
@@ -37,11 +37,11 @@ export default function AllProjectComponent({ data }: { data: MultiPortfolioPage
         <div className='flex flex-row gap-2 items-center '>
           <IoHomeOutline className='text-green-100 ' width={24} height={24} />
           <div className='text-xs lg:text-base text-gray-800 font-bold uppercase'>
-            HOME / ALL PROJECT / {' '} <span className='text-green-100'>{currentProject}</span>
+            HOME / My Portfolio / {' '} <span className='text-green-100'>{currentProject}</span>
           </div>
         </div>
         <div className='hidden uppercase lg:flex flex-row gap-2 text-lg lg:text-2xl text-white items-center'>
-          ALL PROJECTS
+          My Portfolio
           <button onClick={() => router.back()} className='bg-green-100 text-black-100 rounded-full px-2 py-2 lg:px-2 lg:py-1'>
             <IoMdClose className='lg:w-[32px] lg:h-[32px]' />
           </button>
@@ -72,15 +72,15 @@ export default function AllProjectComponent({ data }: { data: MultiPortfolioPage
             {Object.keys(leftPanel).map((key) => {
               const projects = leftPanel[key]
               return <Fragment key={key}>
-                <div className='text-xl font-bold my-[1rem] text-white'>{key}</div>
+                <div className='text-xl font-bold my-[1rem] text-white'>Case study & UI Design</div>
                 {projects.map((project: any) => {
                   return <button key={project.id} className={`relative flex flex-row items-center rounded-[1rem] px-[1rem] py-[0.5rem] pr-[1rem] lg:pr-[4rem] gap-4 border border-1 border-gray-100 w-full ${project.id === selectedPage.id && "border-green-100 shadow shadow-green-100"} `} onClick={() => setSelectedPage(project)}>
                     <div className='w-[3rem] h-[3rem] rounded-full overflow-hidden'>
                       <ImageWrapper alt={project.attributes.thumbnail_image.data.attributes.alternativeText || ""} src={project.attributes.thumbnail_image.data.attributes.formats.thumbnail.url} width={0} height={0} sizes='100vw' className='w-full h-full object-cover' />
                     </div>
                     <div className='flex flex-col gap-[0.25rem]'>
-                      <div className='tracking-[0.15rem] uppercase text-left font-bold text-white'>{project.attributes.project_name}</div>
-                      <div className='tracking-[0.15rem] uppercase text-left font-bold text-sm text-gray-300'>{project.attributes.organisation.organisation}</div>
+                      <div className='tracking-[0.15rem] uppercase text-left font-bold text-gray-300'>{project.attributes.sector}</div>
+                      <div className='tracking-[0.15rem] uppercase text-left font-bold text-white'>#PROJECT: {project.attributes.multiport.length}</div>
                     </div>
                     {project.id === selectedPage.id && <div className='absolute top-[50%] translate-y-[-50%] translate-x-[50%] right-[0%] p-1.5 rounded-full bg-green-100'>
                       <GoArrowRight size={32} />
@@ -95,8 +95,15 @@ export default function AllProjectComponent({ data }: { data: MultiPortfolioPage
             <div className='px-[1rem] py-[1rem] rounded-[0.5rem] lg:px-[2rem] lg:py-[2rem] lg:rounded-[2rem] bg-gray-700 rounded-[2rem]'>
               <div className='flex flex-col gap-6'>
                 <div className='flex flex-row items-center justify-between'>
-                  <div className='font-bold uppercase text-gray-300 lg:text-2xl'>
-                    {selectedPage.attributes.project_name}
+                  <div className='flex gap-2 items-center font-bold uppercase text-gray-300 lg:text-2xl'>
+                    <div>
+                      {selectedPage.attributes.project_name}
+                    </div>
+                    <div className='h-2 w-2 bg-white rounded-full'>
+                    </div>
+                    <div className='text-white'>
+                      {selectedPage.attributes.organisation.organisation}
+                    </div>
                   </div>
                   {<ShowAppIcons appIcons={{ android: selectedPage.attributes.android, ios: selectedPage.attributes.ios, desktop_app: selectedPage.attributes.desktop_app, sass: selectedPage.attributes.sass, web: selectedPage.attributes.web }} />}
                 </div>

@@ -8,7 +8,7 @@ import multiPortJSON from "../../../public/dummy.json"
 export default async function AllProject() {
 
   const result: any = await getMultiPortfolios()
-  console.log("result",result)
+  // console.log("result",result)
   // const posts: MultiPortfolioPageSchema = result
 
   // const result = multiPortJSON

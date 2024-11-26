@@ -190,7 +190,7 @@ const DiceAnimation = ({ isDiceAnimating, setDiceAnimating }: { isDiceAnimating:
     }, [isDiceAnimating])
 
     const dice = DICES[randomIndex - 1]
-    console.log("random index", randomIndex, dice)
+    // console.log("random index", randomIndex, dice)
 
     function onDiceAnimation() {
         setDiceAnimating(true)

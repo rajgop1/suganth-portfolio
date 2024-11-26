@@ -12,7 +12,7 @@ type SinglePortfolioPageParams = {
 export async function generateStaticParams() {
     const result: any = await getSinglePortfolios()
     // const result = singlePortJSON
-    console.log("result", result)
+    // console.log("result", result)
     const posts: SinglePortfolioPageSchema = result
 
     return posts.data.map((post) => {
@@ -28,7 +28,7 @@ export default async function SinglePage({ params }: { params: SinglePortfolioPa
     // const dummyData = singlePortJSON
     // const result = dummyData.data[0]
 
-    console.log("result", result)
+    // console.log("result", result)
 
     return (
         <SinglePageComponent data={result.data[0]} />

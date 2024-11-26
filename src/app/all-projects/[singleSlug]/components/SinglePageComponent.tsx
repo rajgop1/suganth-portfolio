@@ -14,7 +14,7 @@ import Footer from '@/app/components/common/Footer'
 
 export default function SinglePageComponent({ data }: { data: SinglePortfolioPageData }) {
 
-  console.log("data", data)
+  // console.log("data", data)
   const router = useRouter()
 
   return (

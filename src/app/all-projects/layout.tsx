@@ -14,7 +14,9 @@ export default function AllProjectsLayout({
             <Header />
             {children}
             <LetsGoForTea />
-            <Email />
+            <div id="email">
+                <Email />
+            </div>
             <Footer />
         </section>
     );
